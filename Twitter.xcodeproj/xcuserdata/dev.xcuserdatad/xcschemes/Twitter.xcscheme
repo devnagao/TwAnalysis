@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D7B9EF391F279B89002B5A8A"
+               BlueprintIdentifier = "D7B9EF5C1F27A065002B5A8A"
                BuildableName = "Twitter.app"
                BlueprintName = "Twitter"
                ReferencedContainer = "container:Twitter.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D7B9EF391F279B89002B5A8A"
+            BlueprintIdentifier = "D7B9EF5C1F27A065002B5A8A"
             BuildableName = "Twitter.app"
             BlueprintName = "Twitter"
             ReferencedContainer = "container:Twitter.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D7B9EF391F279B89002B5A8A"
+            BlueprintIdentifier = "D7B9EF5C1F27A065002B5A8A"
             BuildableName = "Twitter.app"
             BlueprintName = "Twitter"
             ReferencedContainer = "container:Twitter.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D7B9EF391F279B89002B5A8A"
+            BlueprintIdentifier = "D7B9EF5C1F27A065002B5A8A"
             BuildableName = "Twitter.app"
             BlueprintName = "Twitter"
             ReferencedContainer = "container:Twitter.xcodeproj">
