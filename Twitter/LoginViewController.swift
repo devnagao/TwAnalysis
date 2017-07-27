@@ -37,8 +37,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.txtUsername.resignFirstResponder()
         
-        let todosEndpoint: String = "https://twfollo.com/retweet/twapi.php"
-        let newTodo: [String: Any] = ["twusername333": self.txtUsername.text!]
+        let urlString: String = "https://twfollo.com/retweet/twapi.php"
+        let param: [String: Any] = ["twusername333": self.txtUsername.text!]
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.loadingImageView.image = gif
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        Alamofire.request(todosEndpoint, method: .post, parameters: newTodo,
+        Alamofire.request(urlString, method: .post, parameters: param,
                           encoding: JSONEncoding.default)
             .responseJSON { response in
                 
