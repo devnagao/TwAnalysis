@@ -74,8 +74,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 print("The title is: " + (json["url2"] as! String))
                 
-                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainTabbarVC") as! UITabBarController
+                AppData.shared.username = self.txtUsername.text!
                 AppData.shared.jsonData = json
+                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainTabbarVC") as! UITabBarController
                 self.navigationController?.pushViewController(mainVC, animated: true)
         }
 

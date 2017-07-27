@@ -10,10 +10,11 @@ import UIKit
 
 final class AppData {
     private init() {
-        
+        self.username = nil
     }
     
     static let shared = AppData()
     
+    var username : String?
     var jsonData : [String: Any] = [:]
 }

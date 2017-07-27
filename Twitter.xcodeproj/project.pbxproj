@@ -18,6 +18,15 @@
 		D7B9EFE51F291796002B5A8A /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFE41F291796002B5A8A /* iOSDevCenters+GIF.swift */; };
 		D7B9EFE71F292F71002B5A8A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFE61F292F71002B5A8A /* HomeViewController.swift */; };
 		D7B9EFE91F2931F4002B5A8A /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFE81F2931F4002B5A8A /* AppData.swift */; };
+		D7B9EFEB1F293BF1002B5A8A /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFEA1F293BF1002B5A8A /* coin.png */; };
+		D7B9EFEF1F298ED6002B5A8A /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFEE1F298ED6002B5A8A /* avatar.png */; };
+		D7B9EFF11F29956F002B5A8A /* UserPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFF01F29956E002B5A8A /* UserPanelViewController.swift */; };
+		D7B9EFF41F29E0BC002B5A8A /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFF31F29E0BC002B5A8A /* WelcomeVC.swift */; };
+		D7B9EFF81F29E140002B5A8A /* AnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFF71F29E13F002B5A8A /* AnalysisVC.swift */; };
+		D7B9EFFA1F29E15C002B5A8A /* Tip1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFF91F29E15C002B5A8A /* Tip1VC.swift */; };
+		D7B9EFFC1F29E173002B5A8A /* Tip2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFFB1F29E173002B5A8A /* Tip2VC.swift */; };
+		D7B9EFFF1F29E8E5002B5A8A /* blue_next.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFFD1F29E8E5002B5A8A /* blue_next.png */; };
+		D7B9F0001F29E8E5002B5A8A /* blue_prev.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFFE1F29E8E5002B5A8A /* blue_prev.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,15 @@
 		D7B9EFE41F291796002B5A8A /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		D7B9EFE61F292F71002B5A8A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D7B9EFE81F2931F4002B5A8A /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		D7B9EFEA1F293BF1002B5A8A /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coin.png; path = images/coin.png; sourceTree = "<group>"; };
+		D7B9EFEE1F298ED6002B5A8A /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = images/avatar.png; sourceTree = "<group>"; };
+		D7B9EFF01F29956E002B5A8A /* UserPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPanelViewController.swift; sourceTree = "<group>"; };
+		D7B9EFF31F29E0BC002B5A8A /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = AnalysisSubVCs/WelcomeVC.swift; sourceTree = "<group>"; };
+		D7B9EFF71F29E13F002B5A8A /* AnalysisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisVC.swift; path = AnalysisSubVCs/AnalysisVC.swift; sourceTree = "<group>"; };
+		D7B9EFF91F29E15C002B5A8A /* Tip1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tip1VC.swift; path = AnalysisSubVCs/Tip1VC.swift; sourceTree = "<group>"; };
+		D7B9EFFB1F29E173002B5A8A /* Tip2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tip2VC.swift; path = AnalysisSubVCs/Tip2VC.swift; sourceTree = "<group>"; };
+		D7B9EFFD1F29E8E5002B5A8A /* blue_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_next.png; path = images/blue_next.png; sourceTree = "<group>"; };
+		D7B9EFFE1F29E8E5002B5A8A /* blue_prev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_prev.png; path = images/blue_prev.png; sourceTree = "<group>"; };
 		DB96DB14A041A3A1C4C4C82A /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +106,7 @@
 		D7B9EFC41F283376002B5A8A /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				D7B9EFF21F29DFDE002B5A8A /* AnalysisSubVCs */,
 				D7B9EFE41F291796002B5A8A /* iOSDevCenters+GIF.swift */,
 				D7B9EFD71F283BA1002B5A8A /* images */,
 				D7B9EFC51F283376002B5A8A /* AppDelegate.swift */,
@@ -98,6 +117,7 @@
 				D7B9EFD11F283376002B5A8A /* Info.plist */,
 				D7B9EFE61F292F71002B5A8A /* HomeViewController.swift */,
 				D7B9EFE81F2931F4002B5A8A /* AppData.swift */,
+				D7B9EFF01F29956E002B5A8A /* UserPanelViewController.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -105,10 +125,25 @@
 		D7B9EFD71F283BA1002B5A8A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D7B9EFFD1F29E8E5002B5A8A /* blue_next.png */,
+				D7B9EFFE1F29E8E5002B5A8A /* blue_prev.png */,
+				D7B9EFEE1F298ED6002B5A8A /* avatar.png */,
+				D7B9EFEA1F293BF1002B5A8A /* coin.png */,
 				D7B9EFE21F2914A0002B5A8A /* loading.gif */,
 				D7B9EFDE1F289016002B5A8A /* logo.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		D7B9EFF21F29DFDE002B5A8A /* AnalysisSubVCs */ = {
+			isa = PBXGroup;
+			children = (
+				D7B9EFF31F29E0BC002B5A8A /* WelcomeVC.swift */,
+				D7B9EFF71F29E13F002B5A8A /* AnalysisVC.swift */,
+				D7B9EFF91F29E15C002B5A8A /* Tip1VC.swift */,
+				D7B9EFFB1F29E173002B5A8A /* Tip2VC.swift */,
+			);
+			name = AnalysisSubVCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +211,12 @@
 			files = (
 				D7B9EFDF1F289016002B5A8A /* logo.png in Resources */,
 				D7B9EFD01F283376002B5A8A /* LaunchScreen.storyboard in Resources */,
+				D7B9EFEB1F293BF1002B5A8A /* coin.png in Resources */,
 				D7B9EFE31F2914A0002B5A8A /* loading.gif in Resources */,
+				D7B9EFEF1F298ED6002B5A8A /* avatar.png in Resources */,
 				D7B9EFCD1F283376002B5A8A /* Assets.xcassets in Resources */,
+				D7B9EFFF1F29E8E5002B5A8A /* blue_next.png in Resources */,
+				D7B9F0001F29E8E5002B5A8A /* blue_prev.png in Resources */,
 				D7B9EFCB1F283376002B5A8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,10 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B9EFFA1F29E15C002B5A8A /* Tip1VC.swift in Sources */,
+				D7B9EFF81F29E140002B5A8A /* AnalysisVC.swift in Sources */,
 				D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */,
 				D7B9EFE51F291796002B5A8A /* iOSDevCenters+GIF.swift in Sources */,
+				D7B9EFF11F29956F002B5A8A /* UserPanelViewController.swift in Sources */,
 				D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */,
 				D7B9EFE71F292F71002B5A8A /* HomeViewController.swift in Sources */,
+				D7B9EFFC1F29E173002B5A8A /* Tip2VC.swift in Sources */,
+				D7B9EFF41F29E0BC002B5A8A /* WelcomeVC.swift in Sources */,
 				D7B9EFE91F2931F4002B5A8A /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
