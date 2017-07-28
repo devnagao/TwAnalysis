@@ -113,4 +113,8 @@ class MainViewController: UIViewController {
         self.viewSettings.isHidden = false
     }
 
+    
+    @IBAction func onBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

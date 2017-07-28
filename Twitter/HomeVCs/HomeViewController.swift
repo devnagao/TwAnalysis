@@ -61,11 +61,6 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
-    @IBAction func onBack(_ sender: Any) {
-        self.tabBarController?.navigationController?.popViewController(animated: true)
-    }
     
     
     @IBAction func onUserPanel(_ sender: Any) {

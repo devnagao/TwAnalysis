@@ -15,6 +15,10 @@
 		D75C95891F2ACF0A00C6B534 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95851F2ACF0A00C6B534 /* WelcomeVC.swift */; };
 		D75C958B1F2ACF1C00C6B534 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C958A1F2ACF1C00C6B534 /* HomeViewController.swift */; };
 		D75C958D1F2ACF4600C6B534 /* UserPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C958C1F2ACF4600C6B534 /* UserPanelViewController.swift */; };
+		D75C95911F2AE47F00C6B534 /* BuyCreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95901F2AE47F00C6B534 /* BuyCreditsViewController.swift */; };
+		D75C95931F2AE49200C6B534 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95921F2AE49200C6B534 /* SettingsViewController.swift */; };
+		D75C95951F2AE51F00C6B534 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95941F2AE51F00C6B534 /* ContactUsViewController.swift */; };
+		D75C95971F2AE7BB00C6B534 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D75C95961F2AE7BB00C6B534 /* back_icon.png */; };
 		D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC51F283376002B5A8A /* AppDelegate.swift */; };
 		D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC71F283376002B5A8A /* LoginViewController.swift */; };
 		D7B9EFCB1F283376002B5A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFC91F283376002B5A8A /* Main.storyboard */; };
@@ -40,6 +44,10 @@
 		D75C95851F2ACF0A00C6B534 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = HomeVCs/AnalysisSubVCs/WelcomeVC.swift; sourceTree = "<group>"; };
 		D75C958A1F2ACF1C00C6B534 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeVCs/HomeViewController.swift; sourceTree = "<group>"; };
 		D75C958C1F2ACF4600C6B534 /* UserPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPanelViewController.swift; path = HomeVCs/UserPanelViewController.swift; sourceTree = "<group>"; };
+		D75C95901F2AE47F00C6B534 /* BuyCreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyCreditsViewController.swift; path = BuyCreditsVCs/BuyCreditsViewController.swift; sourceTree = "<group>"; };
+		D75C95921F2AE49200C6B534 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SettingsVCs/SettingsViewController.swift; sourceTree = "<group>"; };
+		D75C95941F2AE51F00C6B534 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsViewController.swift; path = SettingsVCs/ContactUsViewController.swift; sourceTree = "<group>"; };
+		D75C95961F2AE7BB00C6B534 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = images/back_icon.png; sourceTree = "<group>"; };
 		D7B9EFC21F283376002B5A8A /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B9EFC51F283376002B5A8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B9EFC71F283376002B5A8A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,23 @@
 			name = HomeVCs;
 			sourceTree = "<group>";
 		};
+		D75C958E1F2AE44600C6B534 /* BuyCreditsVCs */ = {
+			isa = PBXGroup;
+			children = (
+				D75C95901F2AE47F00C6B534 /* BuyCreditsViewController.swift */,
+			);
+			name = BuyCreditsVCs;
+			sourceTree = "<group>";
+		};
+		D75C958F1F2AE44D00C6B534 /* SettingsVCs */ = {
+			isa = PBXGroup;
+			children = (
+				D75C95921F2AE49200C6B534 /* SettingsViewController.swift */,
+				D75C95941F2AE51F00C6B534 /* ContactUsViewController.swift */,
+			);
+			name = SettingsVCs;
+			sourceTree = "<group>";
+		};
 		D7B9EFB91F283376002B5A8A = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +143,8 @@
 		D7B9EFC41F283376002B5A8A /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				D75C958F1F2AE44D00C6B534 /* SettingsVCs */,
+				D75C958E1F2AE44600C6B534 /* BuyCreditsVCs */,
 				D75C95811F2ACED200C6B534 /* HomeVCs */,
 				D7B9EFE41F291796002B5A8A /* iOSDevCenters+GIF.swift */,
 				D7B9EFD71F283BA1002B5A8A /* images */,
@@ -136,6 +163,7 @@
 		D7B9EFD71F283BA1002B5A8A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D75C95961F2AE7BB00C6B534 /* back_icon.png */,
 				D7B9EFFD1F29E8E5002B5A8A /* blue_next.png */,
 				D7B9EFFE1F29E8E5002B5A8A /* blue_prev.png */,
 				D7B9EFEE1F298ED6002B5A8A /* avatar.png */,
@@ -192,7 +220,7 @@
 				TargetAttributes = {
 					D7B9EFC11F283376002B5A8A = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 33JLMFSVYG;
+						DevelopmentTeam = 66A7UK39J6;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -229,6 +257,7 @@
 				D7B9EFFF1F29E8E5002B5A8A /* blue_next.png in Resources */,
 				D7B9F0001F29E8E5002B5A8A /* blue_prev.png in Resources */,
 				D7B9EFCB1F283376002B5A8A /* Main.storyboard in Resources */,
+				D75C95971F2AE7BB00C6B534 /* back_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +322,12 @@
 				D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */,
 				D7B9EFE51F291796002B5A8A /* iOSDevCenters+GIF.swift in Sources */,
 				D75C958D1F2ACF4600C6B534 /* UserPanelViewController.swift in Sources */,
+				D75C95911F2AE47F00C6B534 /* BuyCreditsViewController.swift in Sources */,
 				D75C95881F2ACF0A00C6B534 /* TipVC.swift in Sources */,
 				D75C958B1F2ACF1C00C6B534 /* HomeViewController.swift in Sources */,
+				D75C95951F2AE51F00C6B534 /* ContactUsViewController.swift in Sources */,
 				D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */,
+				D75C95931F2AE49200C6B534 /* SettingsViewController.swift in Sources */,
 				D75C95891F2ACF0A00C6B534 /* WelcomeVC.swift in Sources */,
 				D7B9EFE91F2931F4002B5A8A /* AppData.swift in Sources */,
 			);
@@ -345,8 +377,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -397,8 +429,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -425,13 +457,13 @@
 			baseConfigurationReference = B273E52B46C6D9CEABE3151A /* Pods-Twitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 33JLMFSVYG;
+				DEVELOPMENT_TEAM = 66A7UK39J6;
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "040b925a-e6f7-4ee3-a334-c8dd1eade502";
-				PROVISIONING_PROFILE_SPECIFIER = Test_Dist;
+				PROVISIONING_PROFILE = "d3f3f164-042f-456c-b451-c5d1d276b8e4";
+				PROVISIONING_PROFILE_SPECIFIER = Test_Dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -441,13 +473,13 @@
 			baseConfigurationReference = DB96DB14A041A3A1C4C4C82A /* Pods-Twitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 33JLMFSVYG;
+				DEVELOPMENT_TEAM = 66A7UK39J6;
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "040b925a-e6f7-4ee3-a334-c8dd1eade502";
-				PROVISIONING_PROFILE_SPECIFIER = Test_Dist;
+				PROVISIONING_PROFILE = "d3f3f164-042f-456c-b451-c5d1d276b8e4";
+				PROVISIONING_PROFILE_SPECIFIER = Test_Dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
