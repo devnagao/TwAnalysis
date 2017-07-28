@@ -19,6 +19,8 @@
 		D75C95931F2AE49200C6B534 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95921F2AE49200C6B534 /* SettingsViewController.swift */; };
 		D75C95951F2AE51F00C6B534 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95941F2AE51F00C6B534 /* ContactUsViewController.swift */; };
 		D75C95971F2AE7BB00C6B534 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D75C95961F2AE7BB00C6B534 /* back_icon.png */; };
+		D75C959A1F2B285C00C6B534 /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */; };
+		D75C959E1F2B304C00C6B534 /* Myriad Pro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */; };
 		D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC51F283376002B5A8A /* AppDelegate.swift */; };
 		D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC71F283376002B5A8A /* LoginViewController.swift */; };
 		D7B9EFCB1F283376002B5A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFC91F283376002B5A8A /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		D75C95921F2AE49200C6B534 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SettingsVCs/SettingsViewController.swift; sourceTree = "<group>"; };
 		D75C95941F2AE51F00C6B534 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsViewController.swift; path = SettingsVCs/ContactUsViewController.swift; sourceTree = "<group>"; };
 		D75C95961F2AE7BB00C6B534 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = images/back_icon.png; sourceTree = "<group>"; };
+		D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Regular.ttf"; path = "fonts/Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
+		D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Bold.ttf"; path = "fonts/Myriad Pro Bold.ttf"; sourceTree = "<group>"; };
 		D7B9EFC21F283376002B5A8A /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B9EFC51F283376002B5A8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B9EFC71F283376002B5A8A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 			name = SettingsVCs;
 			sourceTree = "<group>";
 		};
+		D75C95981F2B284C00C6B534 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */,
+				D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		D7B9EFB91F283376002B5A8A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,7 @@
 		D7B9EFC41F283376002B5A8A /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				D75C95981F2B284C00C6B534 /* fonts */,
 				D75C958F1F2AE44D00C6B534 /* SettingsVCs */,
 				D75C958E1F2AE44600C6B534 /* BuyCreditsVCs */,
 				D75C95811F2ACED200C6B534 /* HomeVCs */,
@@ -249,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B9EFDF1F289016002B5A8A /* logo.png in Resources */,
+				D75C959A1F2B285C00C6B534 /* Myriad Pro Regular.ttf in Resources */,
 				D7B9EFD01F283376002B5A8A /* LaunchScreen.storyboard in Resources */,
+				D75C959E1F2B304C00C6B534 /* Myriad Pro Bold.ttf in Resources */,
 				D7B9EFEB1F293BF1002B5A8A /* coin.png in Resources */,
 				D7B9EFE31F2914A0002B5A8A /* loading.gif in Resources */,
 				D7B9EFEF1F298ED6002B5A8A /* avatar.png in Resources */,
