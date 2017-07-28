@@ -35,14 +35,14 @@ class AnalysisVC: UIViewController {
         
         if (!isInternetAvailable()) {
             self.loadingView.isHidden = true
-            self.showDefaultAlert(title: "Login Failed", message: "There is no internet connection.")
+            self.showDefaultAlert(title: "Error", message: "There is no internet connection.")
             return
         }
         
         let urlString: String = "https://twfollo.com/retweet/twanalysis.php"
         let param: [String: Any] = ["twusername333": AppData.shared.username!]
         Alamofire.request(urlString, method: .post, parameters: param,
-                          encoding: JSONEncoding.default)
+                          encoding: URLEncoding.default)
             .responseJSON { response in
                 self.imgLoading.image = nil
                 self.loadingView.isHidden = true
@@ -56,7 +56,7 @@ class AnalysisVC: UIViewController {
                 }
                 // make sure we got some JSON since that's what we expect
                 guard let json = response.result.value as? [String: Any] else {
-                    self.showDefaultAlert(title: "Login Failed", message: "")
+                    self.showDefaultAlert(title: "Error", message: "Empty Data")
                     
                     print("didn't get todo object as JSON from API")
                     print("Error: \(String(describing: response.result.error))")
@@ -75,13 +75,13 @@ class AnalysisVC: UIViewController {
     
     func setValues(jsonData: [String: Any]) {
         
-        self.lblFollowerCount.text = jsonData["followerCount"] as? String
-        self.lblFriendsCount.text = jsonData["friendsCount"] as? String
-        self.lblTweetCount.text = jsonData["tweetCount"] as? String
-        self.lblFollowerIncrease.text = jsonData["followerincrease"] as? String
-        self.lblFriendsIncrease.text = jsonData["friendsincrease"] as? String
-        self.lblAverageRT.text = jsonData["averageRT"] as? String
-        self.lblAverageFAV.text = jsonData["averageFAV"] as? String
+        self.lblFollowerCount.text = String(describing: jsonData["followerCount"] as! CFNumber)
+        self.lblFriendsCount.text = String(describing: jsonData["friendsCount"] as! CFNumber)
+        self.lblTweetCount.text = String(describing: jsonData["tweetCount"] as! CFNumber)
+        self.lblFollowerIncrease.text = String(describing: jsonData["followerincrease"] as! CFNumber)
+        self.lblFriendsIncrease.text = String(describing: jsonData["friendsincrease"] as! CFNumber)
+        self.lblAverageRT.text = String(describing: jsonData["averageRT"] as! CFNumber)
+        self.lblAverageFAV.text = String(describing: jsonData["averageFAV"] as! CFNumber)
         
     }
     

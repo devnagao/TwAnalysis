@@ -10,12 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var lblCredits: UILabel!
-    
-    @IBOutlet weak var imgProfile: UIImageView!
-    @IBOutlet weak var lblUsername: UILabel!
-    @IBOutlet weak var lblFollowerCount: UILabel!
-    
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var lblRetordersCount: UILabel!
     
@@ -28,28 +22,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let imageURLString = AppData.shared.jsonData["imageurl"] as? String
-        if (imageURLString != "") {
-            let imageUrl : URL = URL(string: imageURLString!)!
-            
-            DispatchQueue.global(qos: .userInitiated).async {
-                
-                let imageData:NSData = NSData(contentsOf: imageUrl)!
-                
-                // When from background thread, UI needs to be updated on main_queue
-                DispatchQueue.main.async {
-                    let image = UIImage(data: imageData as Data)
-                    self.imgProfile.image = image
-                }
-            }
-        }
-        
-        self.lblUsername.text = AppData.shared.username
-        self.lblCredits.text = (AppData.shared.jsonData["credits"] as! String) ?? "0"
-        
-        let followCount = (AppData.shared.jsonData["followercount"] as? String) ?? "0"
-        self.lblFollowerCount.text = followCount + " Followers"
         
         let status = Int(AppData.shared.jsonData["status"] as! String) ?? 0
         if (status > 0) {
@@ -82,9 +54,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.imgProfile.layer.borderColor = UIColor.white.cgColor
-        self.imgProfile.layer.borderWidth = 3
-        self.imgProfile.layer.cornerRadius = self.imgProfile.bounds.size.height / 2.0
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

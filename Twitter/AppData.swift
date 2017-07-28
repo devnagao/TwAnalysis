@@ -17,4 +17,5 @@ final class AppData {
     
     var username : String?
     var jsonData : [String: Any] = [:]
+    var credits : Int = 0
 }
