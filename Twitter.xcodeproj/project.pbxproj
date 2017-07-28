@@ -11,7 +11,6 @@
 		D75C95801F2AC89E00C6B534 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C957F1F2AC89E00C6B534 /* MainViewController.swift */; };
 		D75C95861F2ACF0A00C6B534 /* AnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95821F2ACF0A00C6B534 /* AnalysisVC.swift */; };
 		D75C95871F2ACF0A00C6B534 /* TipDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95831F2ACF0A00C6B534 /* TipDetailVC.swift */; };
-		D75C95881F2ACF0A00C6B534 /* TipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95841F2ACF0A00C6B534 /* TipVC.swift */; };
 		D75C95891F2ACF0A00C6B534 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C95851F2ACF0A00C6B534 /* WelcomeVC.swift */; };
 		D75C958B1F2ACF1C00C6B534 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C958A1F2ACF1C00C6B534 /* HomeViewController.swift */; };
 		D75C958D1F2ACF4600C6B534 /* UserPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C958C1F2ACF4600C6B534 /* UserPanelViewController.swift */; };
@@ -21,6 +20,7 @@
 		D75C95971F2AE7BB00C6B534 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D75C95961F2AE7BB00C6B534 /* back_icon.png */; };
 		D75C959A1F2B285C00C6B534 /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */; };
 		D75C959E1F2B304C00C6B534 /* Myriad Pro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */; };
+		D75C95A01F2BB48800C6B534 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75C959F1F2BB48800C6B534 /* StoreKit.framework */; };
 		D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC51F283376002B5A8A /* AppDelegate.swift */; };
 		D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC71F283376002B5A8A /* LoginViewController.swift */; };
 		D7B9EFCB1F283376002B5A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFC91F283376002B5A8A /* Main.storyboard */; };
@@ -42,7 +42,6 @@
 		D75C957F1F2AC89E00C6B534 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D75C95821F2ACF0A00C6B534 /* AnalysisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisVC.swift; path = HomeVCs/AnalysisSubVCs/AnalysisVC.swift; sourceTree = "<group>"; };
 		D75C95831F2ACF0A00C6B534 /* TipDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipDetailVC.swift; path = HomeVCs/AnalysisSubVCs/TipDetailVC.swift; sourceTree = "<group>"; };
-		D75C95841F2ACF0A00C6B534 /* TipVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipVC.swift; path = HomeVCs/AnalysisSubVCs/TipVC.swift; sourceTree = "<group>"; };
 		D75C95851F2ACF0A00C6B534 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = HomeVCs/AnalysisSubVCs/WelcomeVC.swift; sourceTree = "<group>"; };
 		D75C958A1F2ACF1C00C6B534 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeVCs/HomeViewController.swift; sourceTree = "<group>"; };
 		D75C958C1F2ACF4600C6B534 /* UserPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPanelViewController.swift; path = HomeVCs/UserPanelViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		D75C95961F2AE7BB00C6B534 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = images/back_icon.png; sourceTree = "<group>"; };
 		D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Regular.ttf"; path = "fonts/Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Bold.ttf"; path = "fonts/Myriad Pro Bold.ttf"; sourceTree = "<group>"; };
+		D75C959F1F2BB48800C6B534 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D7B9EFC21F283376002B5A8A /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B9EFC51F283376002B5A8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B9EFC71F283376002B5A8A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6F94B441949923C388346C /* Pods_Twitter.framework in Frameworks */,
+				D75C95A01F2BB48800C6B534 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +95,7 @@
 		84E281B825FE64767235ED80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D75C959F1F2BB48800C6B534 /* StoreKit.framework */,
 				9537B171F7A6B10DC23AC4DD /* Pods_Twitter.framework */,
 			);
 			name = Frameworks;
@@ -193,7 +195,6 @@
 			children = (
 				D75C95821F2ACF0A00C6B534 /* AnalysisVC.swift */,
 				D75C95831F2ACF0A00C6B534 /* TipDetailVC.swift */,
-				D75C95841F2ACF0A00C6B534 /* TipVC.swift */,
 				D75C95851F2ACF0A00C6B534 /* WelcomeVC.swift */,
 			);
 			name = AnalysisSubVCs;
@@ -234,8 +235,13 @@
 				TargetAttributes = {
 					D7B9EFC11F283376002B5A8A = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 66A7UK39J6;
+						DevelopmentTeam = 33JLMFSVYG;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -339,7 +345,6 @@
 				D7B9EFE51F291796002B5A8A /* iOSDevCenters+GIF.swift in Sources */,
 				D75C958D1F2ACF4600C6B534 /* UserPanelViewController.swift in Sources */,
 				D75C95911F2AE47F00C6B534 /* BuyCreditsViewController.swift in Sources */,
-				D75C95881F2ACF0A00C6B534 /* TipVC.swift in Sources */,
 				D75C958B1F2ACF1C00C6B534 /* HomeViewController.swift in Sources */,
 				D75C95951F2AE51F00C6B534 /* ContactUsViewController.swift in Sources */,
 				D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */,
@@ -393,8 +398,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jon Wagner (965QMAWUH6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jon Wagner (965QMAWUH6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -445,8 +450,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gary Wurtzel (B8DC473FD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jon Wagner (965QMAWUH6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jon Wagner (965QMAWUH6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -473,12 +478,12 @@
 			baseConfigurationReference = B273E52B46C6D9CEABE3151A /* Pods-Twitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 66A7UK39J6;
+				DEVELOPMENT_TEAM = 33JLMFSVYG;
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d3f3f164-042f-456c-b451-c5d1d276b8e4";
+				PROVISIONING_PROFILE = "892b602a-67c8-484f-b8a6-2d307ac78dc6";
 				PROVISIONING_PROFILE_SPECIFIER = Test_Dev;
 				SWIFT_VERSION = 3.0;
 			};
@@ -489,12 +494,12 @@
 			baseConfigurationReference = DB96DB14A041A3A1C4C4C82A /* Pods-Twitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 66A7UK39J6;
+				DEVELOPMENT_TEAM = 33JLMFSVYG;
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d3f3f164-042f-456c-b451-c5d1d276b8e4";
+				PROVISIONING_PROFILE = "892b602a-67c8-484f-b8a6-2d307ac78dc6";
 				PROVISIONING_PROFILE_SPECIFIER = Test_Dev;
 				SWIFT_VERSION = 3.0;
 			};

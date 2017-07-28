@@ -31,7 +31,9 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        NotificationCenter.default.addObserver(self, selector: #selector(test), name: NSNotification.Name(rawValue: "reducecredits"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshViews), name: NSNotification.Name(rawValue: "refresh"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gotoBuyCredits), name: NSNotification.Name(rawValue: "gotobuycredits"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gotoChangeUser), name: NSNotification.Name(rawValue: "gotochangeuser"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +41,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func test() {
+    func refreshViews() {
         self.initViews()
     }
 
@@ -90,6 +92,10 @@ class MainViewController: UIViewController {
     
     @IBAction func onBuyCreditsTab(_ sender: Any) {
         
+        self.gotoBuyCredits()
+    }
+    
+    func gotoBuyCredits() {
         self.btnHomeTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 131/255.0, blue: 208/255.0, alpha: 1.0)
         self.btnBuyCreditsTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 100/255.0, blue: 1.0, alpha: 1.0)
         self.btnSettingsTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 131/255.0, blue: 208/255.0, alpha: 1.0)
@@ -97,8 +103,6 @@ class MainViewController: UIViewController {
         self.viewHome.isHidden = true
         self.viewBuyCredits.isHidden = false
         self.viewSettings.isHidden = true
-        
-        
     }
     
     @IBAction func onSettings(_ sender: Any) {
@@ -115,6 +119,11 @@ class MainViewController: UIViewController {
 
     
     @IBAction func onBack(_ sender: Any) {
+        self.gotoChangeUser()
+    }
+    
+    func gotoChangeUser() {
         self.navigationController?.popViewController(animated: true)
     }
+    
 }

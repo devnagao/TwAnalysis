@@ -81,9 +81,11 @@ class TipDetailVC: UIViewController {
     }
     
     @IBAction func onShow(_ sender: Any) {
+        
         let credits = AppData.shared.credits
         if credits < tipCost {
             self.showDefaultAlert(title: "", message: "Your need more credits to show.")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gotobuycredits"), object: nil)
             return
         }
         
@@ -126,7 +128,7 @@ class TipDetailVC: UIViewController {
                 AppData.shared.jsonData = json
                 AppData.shared.credits = Int(json["credits"] as! CFNumber)
                 
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reducecredits"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
                 
                 self.showTipContent()
                 

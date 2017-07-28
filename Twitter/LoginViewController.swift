@@ -32,18 +32,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         
     }
-
-    @IBAction func onContinue(_ sender: Any) {
-        
-        self.txtUsername.resignFirstResponder()
-        
+    
+    func login() {
         let urlString: String = "https://twfollo.com/retweet/twapi.php"
         let param: [String: Any] = ["twusername333": self.txtUsername.text!]
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.loadingImageView.image = gif
         self.loadingView.isHidden = false
-
+        
         if (!isInternetAvailable()) {
             self.loadingView.isHidden = true
             self.showDefaultAlert(title: "Login Failed", message: "There is no internet connection.")
@@ -82,24 +79,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
                 self.navigationController?.pushViewController(mainVC, animated: true)
         }
+    }
 
+    @IBAction func onContinue(_ sender: Any) {
         
-        
+        self.txtUsername.resignFirstResponder()
+        self.login()
     }
     
-    func showDefaultAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
-        alertController.addAction(okAction)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.txtUsername.resignFirstResponder()
-        
+        self.login()
         return true
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 30
+        let ACCEPTABLE_CHARACTERS = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_."
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        
+        if (newString.length > maxLength) {
+            return false
+        }
+        
+        let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS).inverted
+        let filtered = (string.components(separatedBy: cs)).joined(separator: "")
+        
+        return string == filtered
+    }
+    
     
     func isInternetAvailable() -> Bool
     {
@@ -120,6 +132,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let isReachable = flags.contains(.reachable)
         let needsConnection = flags.contains(.connectionRequired)
         return (isReachable && !needsConnection)
+    }
+    
+    func showDefaultAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }
