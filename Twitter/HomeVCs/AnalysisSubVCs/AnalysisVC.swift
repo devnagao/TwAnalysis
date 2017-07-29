@@ -40,7 +40,9 @@ class AnalysisVC: UIViewController {
         }
         
         let urlString: String = "https://twfollo.com/retweet/twanalysis.php"
-        let param: [String: Any] = ["twusername333": AppData.shared.username!]
+        
+        let username = UserDefaults.standard.string(forKey: "username") ?? ""
+        let param: [String: Any] = ["twusername333": username]
         Alamofire.request(urlString, method: .post, parameters: param,
                           encoding: URLEncoding.default)
             .responseJSON { response in

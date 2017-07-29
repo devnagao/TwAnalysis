@@ -17,8 +17,8 @@ class UserPanelViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let url = "https://twfollo.com/conditional/twitter.php?user=" + AppData.shared.username!
+        let username = UserDefaults.standard.string(forKey: "username") ?? ""
+        let url = "https://twfollo.com/conditional/twitter.php?user=" + username
         
         self.webView.loadRequest(URLRequest(url: URL(string: url)!))
     }

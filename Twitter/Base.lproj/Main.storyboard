@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2T-lU-hXd">
-                                        <rect key="frame" x="145" y="30.5" width="86.5" height="20"/>
+                                        <rect key="frame" x="145" y="31" width="86.5" height="20"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jX6-jQ-5mr" userLabel="Username View">
                                 <rect key="frame" x="15" y="154" width="345" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="baykankuskan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVz-Ct-CWd">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVz-Ct-CWd">
                                         <rect key="frame" x="4" y="0.0" width="337" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -183,7 +183,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S67-sz-N3E">
-                                        <rect key="frame" x="312.5" y="28" width="10.5" height="20"/>
+                                        <rect key="frame" x="312.5" y="27.5" width="10.5" height="20"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angelina" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-hO-E0L">
-                                        <rect key="frame" x="146.5" y="169" width="82.5" height="28"/>
+                                        <rect key="frame" x="147" y="169" width="82.5" height="28"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -211,7 +211,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6720 Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5z-QO-EUl">
-                                        <rect key="frame" x="119" y="198" width="137.5" height="28"/>
+                                        <rect key="frame" x="119.5" y="198" width="137.5" height="28"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -527,13 +527,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-rf-w01">
-                                                <rect key="frame" x="141" y="16" width="95" height="22"/>
+                                                <rect key="frame" x="140.5" y="16" width="95" height="22"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to your user panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-Ze-5Ko">
-                                                <rect key="frame" x="89.5" y="54" width="196.5" height="22"/>
+                                                <rect key="frame" x="90" y="54" width="196.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -545,7 +545,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with your credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXQ-gu-PwS">
-                                                <rect key="frame" x="111" y="98" width="153.5" height="22"/>
+                                                <rect key="frame" x="111.5" y="98" width="153.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -675,7 +675,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fjq-YQ-Abk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dVU-lK-GcX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dVU-lK-GcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -710,25 +710,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-Nr-5ag">
-                                        <rect key="frame" x="141" y="16" width="95" height="22"/>
+                                        <rect key="frame" x="140.5" y="16" width="95" height="22"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the best application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iig-hm-pGE">
-                                        <rect key="frame" x="40" y="54" width="296.5" height="22"/>
+                                        <rect key="frame" x="39.5" y="54" width="296.5" height="22"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on the market to learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kQ-xJ-pdl">
-                                        <rect key="frame" x="86.5" y="76" width="204" height="22"/>
+                                        <rect key="frame" x="86" y="76" width="204" height="22"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how to increase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-FU-yzd">
-                                        <rect key="frame" x="115.5" y="98" width="144.5" height="22"/>
+                                        <rect key="frame" x="116" y="98" width="144.5" height="22"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1053,7 +1053,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sJt-cf-lch" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Df-c4-ekZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Df-c4-ekZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1136,7 +1136,7 @@
                                         <rect key="frame" x="62" y="172" width="250" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOW (1.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oB-al-IFm">
-                                                <rect key="frame" x="58.5" y="12" width="109" height="20"/>
+                                                <rect key="frame" x="58.5" y="11.5" width="109" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1149,7 +1149,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ9-vR-EyJ">
-                                                <rect key="frame" x="193.5" y="12" width="6" height="20"/>
+                                                <rect key="frame" x="193.5" y="11.5" width="6" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1734,7 +1734,7 @@
                                         <rect key="frame" x="8" y="0.0" width="359" height="39"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         <connections>
                                             <outlet property="delegate" destination="dBq-Iu-RSO" id="gMn-Kv-pQp"/>
                                         </connections>
@@ -1816,6 +1816,31 @@
                                     <constraint firstAttribute="bottom" secondItem="NTx-ru-GCe" secondAttribute="bottom" id="qqz-gd-7lc"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7J-2K-Ni7" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
+                                <subviews>
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6C-mU-Pmt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-9J-dvT">
+                                        <rect key="frame" x="157" y="162" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="ekz-he-OLp"/>
+                                            <constraint firstAttribute="height" constant="60" id="fPY-IF-IHL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="d6C-mU-Pmt" secondAttribute="trailing" id="DGi-d7-8cY"/>
+                                    <constraint firstItem="d6C-mU-Pmt" firstAttribute="leading" secondItem="s7J-2K-Ni7" secondAttribute="leading" id="K1y-01-jlZ"/>
+                                    <constraint firstItem="UPF-9J-dvT" firstAttribute="centerY" secondItem="s7J-2K-Ni7" secondAttribute="centerY" id="Kgo-f2-271"/>
+                                    <constraint firstItem="UPF-9J-dvT" firstAttribute="centerX" secondItem="s7J-2K-Ni7" secondAttribute="centerX" id="iGb-kB-S18"/>
+                                    <constraint firstItem="d6C-mU-Pmt" firstAttribute="top" secondItem="s7J-2K-Ni7" secondAttribute="top" id="mC1-ee-SnY"/>
+                                    <constraint firstAttribute="bottom" secondItem="d6C-mU-Pmt" secondAttribute="bottom" id="nif-Pr-6JA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1823,7 +1848,9 @@
                             <constraint firstItem="VQd-Qc-xKi" firstAttribute="top" secondItem="CFM-hv-OjT" secondAttribute="bottom" id="4sC-L2-Cbr"/>
                             <constraint firstItem="LtA-6K-qTY" firstAttribute="height" secondItem="Bi3-Ig-ILJ" secondAttribute="height" multiplier="60:684" id="5L8-zG-RSt"/>
                             <constraint firstAttribute="trailing" secondItem="LtA-6K-qTY" secondAttribute="trailing" id="5Ns-gy-8fg"/>
+                            <constraint firstAttribute="bottom" secondItem="s7J-2K-Ni7" secondAttribute="bottom" id="6eK-Fd-Tbs"/>
                             <constraint firstItem="LtA-6K-qTY" firstAttribute="top" secondItem="VQd-Qc-xKi" secondAttribute="bottom" id="F6P-5L-l5F"/>
+                            <constraint firstAttribute="trailing" secondItem="s7J-2K-Ni7" secondAttribute="trailing" id="Fmk-v2-JIH"/>
                             <constraint firstAttribute="bottom" secondItem="tjg-xQ-1nv" secondAttribute="bottom" id="Gs9-8z-Gum"/>
                             <constraint firstAttribute="trailing" secondItem="CFM-hv-OjT" secondAttribute="trailing" id="IDU-ve-oVE"/>
                             <constraint firstItem="tjg-xQ-1nv" firstAttribute="leading" secondItem="Bi3-Ig-ILJ" secondAttribute="leading" id="KTV-kw-orv"/>
@@ -1834,14 +1861,18 @@
                             <constraint firstItem="CFM-hv-OjT" firstAttribute="height" secondItem="Bi3-Ig-ILJ" secondAttribute="height" multiplier="60:684" id="Wmu-yp-6ao"/>
                             <constraint firstItem="QhI-Nt-db8" firstAttribute="leading" secondItem="Bi3-Ig-ILJ" secondAttribute="leading" id="a1b-0b-QrB"/>
                             <constraint firstItem="VQd-Qc-xKi" firstAttribute="height" secondItem="Bi3-Ig-ILJ" secondAttribute="height" multiplier="70:684" id="aXq-A2-Za5"/>
+                            <constraint firstItem="s7J-2K-Ni7" firstAttribute="top" secondItem="Bi3-Ig-ILJ" secondAttribute="top" id="fJX-7C-Czy"/>
                             <constraint firstItem="tjg-xQ-1nv" firstAttribute="top" secondItem="QhI-Nt-db8" secondAttribute="bottom" id="j2G-QT-v61"/>
                             <constraint firstItem="tjg-xQ-1nv" firstAttribute="height" secondItem="Bi3-Ig-ILJ" secondAttribute="height" multiplier="90:684" id="l2a-Uh-5By"/>
+                            <constraint firstItem="s7J-2K-Ni7" firstAttribute="leading" secondItem="Bi3-Ig-ILJ" secondAttribute="leading" id="r8e-oc-E9w"/>
                             <constraint firstItem="CFM-hv-OjT" firstAttribute="leading" secondItem="Bi3-Ig-ILJ" secondAttribute="leading" id="uX0-Wd-P2K"/>
                             <constraint firstItem="LtA-6K-qTY" firstAttribute="leading" secondItem="Bi3-Ig-ILJ" secondAttribute="leading" id="uay-4j-Hn5"/>
                             <constraint firstAttribute="trailing" secondItem="QhI-Nt-db8" secondAttribute="trailing" id="zhH-CB-K0h"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgLoading" destination="UPF-9J-dvT" id="WpM-7y-xWZ"/>
+                        <outlet property="loadingView" destination="s7J-2K-Ni7" id="doA-tp-9Se"/>
                         <outlet property="txtEmail" destination="0YO-UJ-5XR" id="ivx-NF-iqI"/>
                         <outlet property="txtMessage" destination="NTx-ru-GCe" id="Vdx-fe-Ak0"/>
                     </connections>
@@ -1855,7 +1886,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="a7T-fb-osJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IwG-HS-EOV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="IwG-HS-EOV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1873,7 +1904,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NEf-90-NPp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T4a-tN-xK4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T4a-tN-xK4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

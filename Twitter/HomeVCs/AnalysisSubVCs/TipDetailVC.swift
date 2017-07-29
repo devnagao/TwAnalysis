@@ -101,7 +101,8 @@ class TipDetailVC: UIViewController {
         
         let urlString: String = "https://www.twfollo.com/retweet/twapi.php"
         
-        let param: [String: Any] = ["twusername333": AppData.shared.username!, "getoperation": "reducecredits"]
+        let username = UserDefaults.standard.string(forKey: "username") ?? ""
+        let param: [String: Any] = ["twusername333": username, "getoperation": "reducecredits"]
         
         Alamofire.request(urlString, method: .post, parameters: param,
                           encoding: URLEncoding.default)

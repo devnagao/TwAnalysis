@@ -26,6 +26,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.usernameView.layer.cornerRadius = 3
         self.btnContinue.layer.cornerRadius = 3
         
+        self.txtUsername.text = UserDefaults.standard.string(forKey: "username")
+        if (self.txtUsername.text != "") {
+            self.login()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,7 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 print("The title is: " + (json["url2"] as! String))
                 
-                AppData.shared.username = self.txtUsername.text!
+                UserDefaults.standard.set(self.txtUsername.text, forKey: "username")
                 AppData.shared.jsonData = json
                 AppData.shared.credits = Int(json["credits"] as! CFNumber)
                 

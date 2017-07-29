@@ -32,8 +32,17 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         NotificationCenter.default.addObserver(self, selector: #selector(refreshViews), name: NSNotification.Name(rawValue: "refresh"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gotoHome), name: NSNotification.Name(rawValue: "gotohome"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoBuyCredits), name: NSNotification.Name(rawValue: "gotobuycredits"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoChangeUser), name: NSNotification.Name(rawValue: "gotochangeuser"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        let customernot = AppData.shared.jsonData["customernot"] as? String
+        if (customernot != "") {
+            self.showDefaultAlert(title: "", message: customernot!, buttonTitle: "Close")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +80,8 @@ class MainViewController: UIViewController {
             }
         }
         
-        self.lblUsername.text = AppData.shared.username
+        let username = UserDefaults.standard.string(forKey: "username") ?? ""
+        self.lblUsername.text = username
         
         self.lblCredits.text = String(AppData.shared.credits)
         let followCount = Int(AppData.shared.jsonData["followercount"] as? String ?? "") ?? 0
@@ -81,6 +91,10 @@ class MainViewController: UIViewController {
     
     @IBAction func onHomeTab(_ sender: Any) {
         
+        self.gotoHome()
+    }
+    
+    func gotoHome() {
         self.btnHomeTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 100/255.0, blue: 1.0, alpha: 1.0)
         self.btnBuyCreditsTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 131/255.0, blue: 208/255.0, alpha: 1.0)
         self.btnSettingsTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 131/255.0, blue: 208/255.0, alpha: 1.0)
@@ -89,6 +103,7 @@ class MainViewController: UIViewController {
         self.viewBuyCredits.isHidden = true
         self.viewSettings.isHidden = true
     }
+    
     
     @IBAction func onBuyCreditsTab(_ sender: Any) {
         
@@ -126,4 +141,29 @@ class MainViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    func showDefaultAlert(title: String, message: String, buttonTitle: String) {
+        let alertController = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if (self.view.frame.origin.y < 0) {
+            return
+        }
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            let screenHeight = UIScreen.main.bounds.size.height
+            self.view.frame.origin.y = -(keyboardSize.height - screenHeight * 90 / 1334.0)
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y = 0
+    }
 }

@@ -33,27 +33,26 @@ class BuyCreditsViewController: UIViewController {
     
     @IBAction func on250(_ sender: Any) {
         self.encodeBase64(str: "credits_250")
-//        self.iap(receipt: "credits_250")
     }
     
     @IBAction func on500(_ sender: Any) {
-        self.iap(receipt: "credits_500")
+        self.encodeBase64(str: "credits_500")
     }
     
     @IBAction func on1000(_ sender: Any) {
-        self.iap(receipt: "credits_1000")
+        self.encodeBase64(str: "credits_1000")
     }
     
     @IBAction func on2500(_ sender: Any) {
-        self.iap(receipt: "credits_2500")
+        self.encodeBase64(str: "credits_2500")
     }
     
     @IBAction func on5000(_ sender: Any) {
-        self.iap(receipt: "credits_5000")
+        self.encodeBase64(str: "credits_5000")
     }
     
     @IBAction func on10000(_ sender: Any) {
-        self.iap(receipt: "credits_10000")
+        self.encodeBase64(str: "credits_10000")
     }
     
     func encodeBase64(str: String) {
@@ -131,7 +130,9 @@ class BuyCreditsViewController: UIViewController {
         }
         
         let urlString: String = "https://www.twfollo.com/retweet/twapi.php"
-        let param: [String: Any] = ["twusername333": AppData.shared.username!, "getoperation": "buycredits", "receipt": receipt]
+        
+        let username = UserDefaults.standard.string(forKey: "username") ?? ""
+        let param: [String: Any] = ["twusername333": username, "getoperation": "buycredits", "receipt": receipt]
         
         Alamofire.request(urlString, method: .post, parameters: param,
                           encoding: URLEncoding.default)
@@ -155,14 +156,23 @@ class BuyCreditsViewController: UIViewController {
                     return
                 }
                 
-                self.showresult()
+                self.completionPurchase()
                 
         }
     }
     
     
-    func showresult(){
+    func completionPurchase() {
         
+        let alertController = UIAlertController(title: "Success" as String, message: "do you want to see  other applications of us?" as String, preferredStyle: UIAlertControllerStyle.alert)
+        let noAction = UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil)
+        let yesAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default) { (action) in
+            UIApplication.shared.open(URL(string: "https://itunes.apple.com/developer/erkan-eroglu/id667357099")!, options: [:], completionHandler: nil)
+        }
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func isInternetAvailable() -> Bool
