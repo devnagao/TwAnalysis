@@ -11,6 +11,7 @@ import Alamofire
 import SystemConfiguration
 import Foundation
 
+
 class BuyCreditsViewController: UIViewController {
 
     @IBOutlet weak var loadingView: UIView!
@@ -32,30 +33,39 @@ class BuyCreditsViewController: UIViewController {
 
     
     @IBAction func on250(_ sender: Any) {
-        self.encodeBase64(str: "credits_250")
+        let receiptURL = Bundle.main.appStoreReceiptURL
+        
+        do {
+            let receipt = try Data(contentsOf: receiptURL!)
+            self.encodeBase64(str: receipt)
+        } catch {
+            
+        }
+        
+//        self.encodeBase64(str: "credits_250")
     }
     
     @IBAction func on500(_ sender: Any) {
-        self.encodeBase64(str: "credits_500")
+//        self.encodeBase64(str: "credits_500")
     }
     
     @IBAction func on1000(_ sender: Any) {
-        self.encodeBase64(str: "credits_1000")
+//        self.encodeBase64(str: "credits_1000")
     }
     
     @IBAction func on2500(_ sender: Any) {
-        self.encodeBase64(str: "credits_2500")
+//        self.encodeBase64(str: "credits_2500")
     }
     
     @IBAction func on5000(_ sender: Any) {
-        self.encodeBase64(str: "credits_5000")
+//        self.encodeBase64(str: "credits_5000")
     }
     
     @IBAction func on10000(_ sender: Any) {
-        self.encodeBase64(str: "credits_10000")
+//        self.encodeBase64(str: "credits_10000")
     }
     
-    func encodeBase64(str: String) {
+    func encodeBase64(str: Data) {
         
         print("Original: \(str)")
         
@@ -69,12 +79,12 @@ class BuyCreditsViewController: UIViewController {
             return
         }
         
-        let utf8str = str.data(using: String.Encoding.utf8)
         
-        if let receiptData = utf8str?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+        let receiptData = str.base64EncodedString()
+        if (receiptData == "")
         {
             
-            print("Encoded:  \(receiptData)")
+            //print("Encoded:  \(receiptData)")
             
 //            let storeURL = "https://buy.itunes.apple.com/verifyReceipt"
             let storeURL = "https://sandbox.itunes.apple.com/verifyReceipt"
@@ -105,7 +115,11 @@ class BuyCreditsViewController: UIViewController {
                     let status = json["status"] as! Int
                     if (status == 0) {
                         
-                        let receipt = json["receipt"] as Any
+                        guard let receipt = json["receipt"] as? [String: Any] else {
+                            self.showDefaultAlert(title: "Error", message: "No get receipt")
+                            return
+                        }
+                        
                         self.iap(receipt: receipt)
                         
                     } else {
@@ -117,7 +131,7 @@ class BuyCreditsViewController: UIViewController {
         }
     }
 
-    func iap(receipt: Any) {
+    func iap(receipt: [String:Any]) {
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.imgLoading.image = gif
