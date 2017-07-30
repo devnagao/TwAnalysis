@@ -51,5 +51,16 @@
 		<string>Myriad Pro Regular.ttf</string>
 		<string>Myriad Pro Bold.ttf</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.test.twitter</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitter</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

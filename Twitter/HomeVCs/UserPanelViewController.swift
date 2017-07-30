@@ -15,10 +15,13 @@ class UserPanelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         let username = UserDefaults.standard.string(forKey: "username") ?? ""
-        let url = "https://twfollo.com/conditional/twitter.php?user=" + username
+        let languageCode = Locale.preferredLanguages[0]
+        
+        let url = "https://twfollo.com/conditional/twitter.php?user=" + username + "&language=" + languageCode
+//        let url = "twitter://buycredits"
         
         self.webView.loadRequest(URLRequest(url: URL(string: url)!))
     }
@@ -26,6 +29,10 @@ class UserPanelViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 

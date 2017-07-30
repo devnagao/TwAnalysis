@@ -662,6 +662,7 @@
                             <constraint firstItem="BaZ-U1-Cha" firstAttribute="leading" secondItem="Glf-lu-7ly" secondAttribute="leading" id="olK-Bb-m9N"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="BaZ-U1-Cha" id="WJH-ww-MVD"/>
                     </connections>
@@ -675,7 +676,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fjq-YQ-Abk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dVU-lK-GcX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dVU-lK-GcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1053,7 +1054,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sJt-cf-lch" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Df-c4-ekZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Df-c4-ekZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1886,7 +1887,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="a7T-fb-osJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="IwG-HS-EOV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IwG-HS-EOV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1904,7 +1905,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NEf-90-NPp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T4a-tN-xK4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T4a-tN-xK4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

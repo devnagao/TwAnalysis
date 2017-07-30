@@ -64,9 +64,8 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func onUserPanel(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
         
-        let vc : UserPanelViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserPanelViewController") as! UserPanelViewController
-        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
     
     

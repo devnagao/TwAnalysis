@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 import SystemConfiguration
 import Foundation
+import StoreKit
 
-
-class BuyCreditsViewController: UIViewController {
+class BuyCreditsViewController: UIViewController, SKRequestDelegate {
 
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var imgLoading: UIImageView!
@@ -33,14 +33,7 @@ class BuyCreditsViewController: UIViewController {
 
     
     @IBAction func on250(_ sender: Any) {
-        let receiptURL = Bundle.main.appStoreReceiptURL
-        
-        do {
-            let receipt = try Data(contentsOf: receiptURL!)
-            self.encodeBase64(str: receipt)
-        } catch {
-            
-        }
+        self.validateReceipt()
         
 //        self.encodeBase64(str: "credits_250")
     }
@@ -65,9 +58,7 @@ class BuyCreditsViewController: UIViewController {
 //        self.encodeBase64(str: "credits_10000")
     }
     
-    func encodeBase64(str: Data) {
-        
-        print("Original: \(str)")
+    func validateReceipt() {
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.imgLoading.image = gif
@@ -79,8 +70,24 @@ class BuyCreditsViewController: UIViewController {
             return
         }
         
+        let receiptUrl = Bundle.main.appStoreReceiptURL
+
+//        if (FileManager.default.fileExists(atPath: (receiptUrl?.path)!)) {
+//            let receipt = NSData(contentsOf: receiptUrl!)
+//            return
+//        } else {
+//            let refreshReceiptRequest = SKReceiptRefreshRequest(receiptProperties: [:])
+//            refreshReceiptRequest.delegate = self
+//            refreshReceiptRequest.start()
+//        }
         
-        let receiptData = str.base64EncodedString()
+        guard let receipt = NSData(contentsOf: receiptUrl!) else {
+            return
+        }
+        
+        
+        let receiptData: String = receipt.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+        
         if (receiptData == "")
         {
             
@@ -130,6 +137,23 @@ class BuyCreditsViewController: UIViewController {
             
         }
     }
+    
+    
+    func requestDidFinish(_ request: SKRequest) {
+        if request.isKind(of: SKReceiptRefreshRequest.classForCoder()) {
+            let receiptUrl = Bundle.main.appStoreReceiptURL
+            
+            if (FileManager.default.fileExists(atPath: (receiptUrl?.path)!)) {
+                guard let receipt = NSData(contentsOf: receiptUrl!) else {
+                    return
+                }
+            } else {
+//                let refreshReceiptRequest = SKReceiptRefreshRequest(receiptProperties: [:])
+//                refreshReceiptRequest.delegate = self
+//                refreshReceiptRequest.start()
+            }
+        }
+    }
 
     func iap(receipt: [String:Any]) {
         
@@ -171,6 +195,10 @@ class BuyCreditsViewController: UIViewController {
                 }
                 
                 self.completionPurchase()
+                let protected = Int(json["protected"] as! String) ?? 1
+                if (protected == 0) {
+                    self.showDefaultAlert(title: "", message: "Your account is private. Please make your account public.")
+                }
                 
         }
     }
@@ -213,7 +241,7 @@ class BuyCreditsViewController: UIViewController {
     
     func showDefaultAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.cancel, handler: nil)
         alertController.addAction(okAction)
         
         self.present(alertController, animated: true, completion: nil)

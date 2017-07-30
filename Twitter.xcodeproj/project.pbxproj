@@ -398,8 +398,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jon Wagner (965QMAWUH6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jon Wagner (965QMAWUH6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -450,8 +450,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jon Wagner (33JLMFSVYG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jon Wagner (965QMAWUH6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jon Wagner (965QMAWUH6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -483,8 +483,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a978b101-8f13-48f4-8e99-18f6f0266af9";
-				PROVISIONING_PROFILE_SPECIFIER = Test_Dist;
+				PROVISIONING_PROFILE = "892b602a-67c8-484f-b8a6-2d307ac78dc6";
+				PROVISIONING_PROFILE_SPECIFIER = Test_Dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -499,8 +499,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a978b101-8f13-48f4-8e99-18f6f0266af9";
-				PROVISIONING_PROFILE_SPECIFIER = Test_Dist;
+				PROVISIONING_PROFILE = "892b602a-67c8-484f-b8a6-2d307ac78dc6";
+				PROVISIONING_PROFILE_SPECIFIER = Test_Dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

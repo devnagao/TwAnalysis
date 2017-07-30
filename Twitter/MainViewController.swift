@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var viewBuyCredits: UIView!
     @IBOutlet weak var viewSettings: UIView!
     
-    
+    var openUrlId: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(gotoHome), name: NSNotification.Name(rawValue: "gotohome"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoBuyCredits), name: NSNotification.Name(rawValue: "gotobuycredits"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoChangeUser), name: NSNotification.Name(rawValue: "gotochangeuser"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gotoUserPanel), name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -43,6 +44,11 @@ class MainViewController: UIViewController {
         if (customernot != "") {
             self.showDefaultAlert(title: "", message: customernot!, buttonTitle: "Close")
         }
+        
+        if openUrlId == "buycredits" {
+            self.gotoBuyCredits()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,9 +90,9 @@ class MainViewController: UIViewController {
         self.lblUsername.text = username
         
         self.lblCredits.text = String(AppData.shared.credits)
-        let followCount = Int(AppData.shared.jsonData["followercount"] as? String ?? "") ?? 0
+        let followCount = AppData.shared.jsonData["followercount"] as? String ?? "0"
         
-        self.lblFollowerCount.text = String(followCount) + " Followers"
+        self.lblFollowerCount.text = followCount + " Followers"
     }
     
     @IBAction func onHomeTab(_ sender: Any) {
@@ -138,7 +144,7 @@ class MainViewController: UIViewController {
     }
     
     func gotoChangeUser() {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
@@ -165,5 +171,10 @@ class MainViewController: UIViewController {
     
     func keyboardWillHide(notification: NSNotification) {
         self.view.frame.origin.y = 0
+    }
+    
+    func gotoUserPanel() {
+        let vc : UserPanelViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserPanelViewController") as! UserPanelViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
