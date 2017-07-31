@@ -8,10 +8,12 @@
 
 import UIKit
 
-class UserPanelViewController: UIViewController {
+class UserPanelViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
     
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,4 +41,24 @@ class UserPanelViewController: UIViewController {
     @IBAction func onClose(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    // UIWebView Delegate
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.loadingImageView.image = gif
+        self.loadingView.isHidden = false
+        
+        return true
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        self.loadingView.isHidden = true
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.loadingView.isHidden = true
+    }
+    
 }
