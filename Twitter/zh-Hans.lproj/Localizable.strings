@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="欢迎";
+"Enter your twitter username:"="输入您的Twitter用户名：";
+"Continue"="继续";
+"Change Username"="更改用户名";
+"Followers"="关注者";
+"RT-FAV"="RT-FAV";
+"are on the way."="在途中。";
+"Welcome to the best application on the market to learn how to increase your followers."="欢迎来到市场上最好的应用程序，以了解如何提高你的追随者。";
+"Start"="开始";
+"Buy Credits"="支付宝充值";
+"Settings"="设置";
+"Credits"="积分";
+"Open your user panel to buy followers and RT-FAV with your credits."="打开你的用户面板购买的追随者和RT-FAV与你的学分。";
+"Close"="关";
+"Do you want to see other applications of us?"="你想看到我们的其他应用程序？";
+"Yes"="是";
+"No"="没有";
+"Tips"="提示";
+"Show"="显示";
+"Contact Us"="联系我们";
+"Rate This App"="为这个应用软件评分";
+"Share This App"="分享这个应用程式";
+"Other Apps"="其他应用程序";
+"Email Adress"="邮箱地址";
+"Message"="信息";
+"Send"="发送";
+"Message Sent!"="邮件已发送！";
+"Failed!"="失败！";
+"Invalid Mail Adress!"="无效的邮件ADRESS！";
+"Your account is private. Please make your account public."="您的帐户是私人的。请您的帐户公开。";

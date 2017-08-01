@@ -1,0 +1,37 @@
+/*
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="Welkom";
+"Enter your twitter username:"="Vul uw twitter gebruikersnaam:";
+"Continue"="voortzetten";
+"Change Username"="Gebruikersnaam wijzigen";
+"Followers"="Volgers";
+"RT-FAV"="RT-FAV";
+"are on the way."="zijn op de weg.";
+"Welcome to the best application on the market to learn how to increase your followers."="Welkom op de beste applicatie op de markt om te leren hoe je followers verhogen.";
+"Start"="Begin";
+"Buy Credits"="Koop tegoed";
+"Settings"="instellingen";
+"Credits"="credits";
+"Open your user panel to buy followers and RT-FAV with your credits."="Open uw gebruikersnaam paneel om volgelingen en RT-FAV kopen met je credits.";
+"Close"="Dichtbij";
+"Do you want to see other applications of us?"="Wilt u andere toepassingen van ons zien?";
+"Yes"="Ja";
+"No"="Nee";
+"Tips"="Tips";
+"Show"="Tonen";
+"Contact Us"="Neem contact met ons op";
+"Rate This App"="Beoordeel deze app";
+"Share This App"="Deel deze app";
+"Other Apps"="Andere apps";
+"Email Adress"="E-mail adres";
+"Message"="Bericht";
+"Send"="sturen";
+"Message Sent!"="Bericht verzonden!";
+"Failed!"="Mislukt!";
+"Invalid Mail Adress!"="Ongeldige mail adres!";
+"Your account is private. Please make your account public."="Uw account is privé. Maak uw rekening publiek.";

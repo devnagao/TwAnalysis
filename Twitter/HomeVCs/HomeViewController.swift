@@ -20,12 +20,15 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var userpanelView: UIView!
     
+    @IBOutlet weak var lblUserPanelContents: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let status = Int(AppData.shared.jsonData["status"] as! String) ?? 0
         if (status > 0) {
-            self.lblStatus.text = String(status) + " Followers are on the way."
+            self.lblStatus.text = String(status) + " " + NSLocalizedString("Followers", comment: "") + NSLocalizedString("are on the way.", comment: "")
         } else {
             self.statusHeight.constant = 0;
             self.view.layoutIfNeeded()
@@ -33,7 +36,7 @@ class HomeViewController: UIViewController {
             
         let retordersCount = AppData.shared.jsonData["retorderscount"] as! Int
         if (retordersCount > 0) {
-            self.lblRetordersCount.text = String(retordersCount) + " RT-FAV orders are on the way."
+            self.lblRetordersCount.text = String(retordersCount) + " " + NSLocalizedString("RT-FAV orders", comment: "") + NSLocalizedString("are on the way.", comment: "") 
         } else {
             self.retordersCountHeight.constant = 0;
             self.view.layoutIfNeeded()
@@ -48,6 +51,7 @@ class HomeViewController: UIViewController {
             self.userpanelView.isHidden = false
         }
         
+        lblUserPanelContents.text = NSLocalizedString("Open your user panel to buy followers and RT-FAV with your credits.", comment: "")
         
     }
 

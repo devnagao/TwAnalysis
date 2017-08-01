@@ -12,17 +12,48 @@ import SystemConfiguration
 import Foundation
 import StoreKit
 
-class BuyCreditsViewController: UIViewController, SKRequestDelegate {
+class BuyCreditsViewController: UIViewController {
 
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var imgLoading: UIImageView!
     
+    var resultString: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.loadingView.isHidden = true
+        
+        var productIdentifiers = Set<ProductIdentifier>()
+        productIdentifiers.insert("credits_250")
+        productIdentifiers.insert("credits_500")
+        productIdentifiers.insert("credits_1000")
+        productIdentifiers.insert("credits_5000")
+        productIdentifiers.insert("credits_10000")
+        
+        IAP.requestProducts(productIdentifiers) { (response, error) in
+            if let products = response?.products, !products.isEmpty {
+                for product in products {
+                    self.resultString += product.productIdentifier
+                }
+                
+            } else if let invalidProductIdentifiers = response?.invalidProductIdentifiers {
+                self.resultString = "Invalid product identifiers: " + invalidProductIdentifiers.description
+                
+            } else if let error = error as NSError? {
+                if error.code == SKError.Code.paymentCancelled.rawValue {
+                    self.resultString = ""
+                    
+                } else {
+                    self.resultString = error.localizedDescription
+                }
+            }
+            print(self.resultString)
+        }
+        
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,129 +64,76 @@ class BuyCreditsViewController: UIViewController, SKRequestDelegate {
 
     
     @IBAction func on250(_ sender: Any) {
-        self.validateReceipt()
         
-//        self.encodeBase64(str: "credits_250")
+        self.purchase(productID: "credits_250")
     }
     
     @IBAction func on500(_ sender: Any) {
-//        self.encodeBase64(str: "credits_500")
+        self.purchase(productID: "credits_500")
     }
     
     @IBAction func on1000(_ sender: Any) {
-//        self.encodeBase64(str: "credits_1000")
+        self.purchase(productID: "credits_1000")
     }
     
     @IBAction func on2500(_ sender: Any) {
-//        self.encodeBase64(str: "credits_2500")
+        self.purchase(productID: "credits_2500")
     }
     
     @IBAction func on5000(_ sender: Any) {
-//        self.encodeBase64(str: "credits_5000")
+        self.purchase(productID: "credits_5000")
     }
     
     @IBAction func on10000(_ sender: Any) {
-//        self.encodeBase64(str: "credits_10000")
+        self.purchase(productID: "credits_10000")
+    }
+    
+    func purchase(productID: String) {
+        IAP.purchaseProduct(productID, handler: { (productIdentifier, error) in
+            if let identifier = productIdentifier {
+                self.resultString = identifier
+                
+            } else if let error = error as NSError? {
+                if error.code == SKError.Code.paymentCancelled.rawValue {
+                    self.resultString = ""
+                    
+                } else {
+                    self.resultString = error.localizedDescription
+                }
+            }
+            
+            self.validateReceipt()
+        })
     }
     
     func validateReceipt() {
         
-        let gif = UIImage.gifImageWithName(name: "loading")
-        self.imgLoading.image = gif
-        self.loadingView.isHidden = false
-        
-        if (!isInternetAvailable()) {
-            self.loadingView.isHidden = true
-            self.showDefaultAlert(title: "Error", message: "There is no internet connection.")
-            return
-        }
-        
-        let receiptUrl = Bundle.main.appStoreReceiptURL
-
-//        if (FileManager.default.fileExists(atPath: (receiptUrl?.path)!)) {
-//            let receipt = NSData(contentsOf: receiptUrl!)
-//            return
-//        } else {
-//            let refreshReceiptRequest = SKReceiptRefreshRequest(receiptProperties: [:])
-//            refreshReceiptRequest.delegate = self
-//            refreshReceiptRequest.start()
-//        }
-        
-        guard let receipt = NSData(contentsOf: receiptUrl!) else {
-            return
-        }
-        
-        
-        let receiptData: String = receipt.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
-        
-        if (receiptData == "")
-        {
+        IAP.validateReceipt("2dbc5006fff544d58c1c4d0fa6446e42") { (statusCode, products, json) in
             
-            //print("Encoded:  \(receiptData)")
+            var receipt: [String: Any] = [:]
             
-//            let storeURL = "https://buy.itunes.apple.com/verifyReceipt"
-            let storeURL = "https://sandbox.itunes.apple.com/verifyReceipt"
-            let requestContents: [String: Any] = ["receipt-data": receiptData]
-            
-            Alamofire.request(storeURL, method: .post, parameters: requestContents,
-                              encoding: URLEncoding.default)
-                .responseJSON { response in
-                    self.imgLoading.image = nil
-                    self.loadingView.isHidden = true
-                    
-                    guard response.result.error == nil else {
-                        // got an error in getting the data, need to handle it
-                        
-                        self.showDefaultAlert(title: "Error", message: "")
-                        print(response.result.error!)
-                        return
-                    }
-                    // make sure we got some JSON since that's what we expect
-                    guard let json = response.result.value as? [String: Any] else {
-                        self.showDefaultAlert(title: "Error", message: "Empty Data")
-                        
-                        print("didn't get todo object as JSON from API")
-                        print("Error: \(String(describing: response.result.error))")
-                        return
-                    }
-                    
-                    let status = json["status"] as! Int
-                    if (status == 0) {
-                        
-                        guard let receipt = json["receipt"] as? [String: Any] else {
-                            self.showDefaultAlert(title: "Error", message: "No get receipt")
-                            return
-                        }
-                        
-                        self.iap(receipt: receipt)
-                        
-                    } else {
-                        
-                        print("Error: no get receipt")
-                    }
-            }
-            
-        }
-    }
-    
-    
-    func requestDidFinish(_ request: SKRequest) {
-        if request.isKind(of: SKReceiptRefreshRequest.classForCoder()) {
-            let receiptUrl = Bundle.main.appStoreReceiptURL
-            
-            if (FileManager.default.fileExists(atPath: (receiptUrl?.path)!)) {
-                guard let receipt = NSData(contentsOf: receiptUrl!) else {
-                    return
-                }
+            if statusCode == ReceiptStatus.noRecipt.rawValue {
+                // No Receipt in main bundle
+                self.resultString = "No receipt"
             } else {
-//                let refreshReceiptRequest = SKReceiptRefreshRequest(receiptProperties: [:])
-//                refreshReceiptRequest.delegate = self
-//                refreshReceiptRequest.start()
+                // Get products with their expire date.
+                var productString = ""
+                if let products = products {
+                    for (productID, _) in products {
+                        productString += productID + " "
+                    }
+                }
+                self.resultString = "\(statusCode ?? -999): \(productString)"
+                
+                receipt = json!
             }
+            
+            self.sendReceipt(receipt: receipt)
+            
         }
     }
-
-    func iap(receipt: [String:Any]) {
+    
+    func sendReceipt(receipt: Any) {
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.imgLoading.image = gif
@@ -197,7 +175,7 @@ class BuyCreditsViewController: UIViewController, SKRequestDelegate {
                 self.completionPurchase()
                 let protected = Int(json["protected"] as! String) ?? 1
                 if (protected == 0) {
-                    self.showDefaultAlert(title: "", message: "Your account is private. Please make your account public.")
+                    self.showDefaultAlert(title: "", message: NSLocalizedString("Your account is private. Please make your account public.", comment: ""))
                 }
                 
         }
@@ -206,9 +184,9 @@ class BuyCreditsViewController: UIViewController, SKRequestDelegate {
     
     func completionPurchase() {
         
-        let alertController = UIAlertController(title: "Success" as String, message: "do you want to see  other applications of us?" as String, preferredStyle: UIAlertControllerStyle.alert)
-        let noAction = UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil)
-        let yesAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default) { (action) in
+        let alertController = UIAlertController(title: "Success" as String, message: NSLocalizedString("Do you want to see other applications of us?", comment: "") as String, preferredStyle: UIAlertControllerStyle.alert)
+        let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
+        let yesAction = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: UIAlertActionStyle.default) { (action) in
             UIApplication.shared.open(URL(string: "https://itunes.apple.com/developer/erkan-eroglu/id667357099")!, options: [:], completionHandler: nil)
         }
         alertController.addAction(noAction)

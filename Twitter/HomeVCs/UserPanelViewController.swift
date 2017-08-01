@@ -22,8 +22,9 @@ class UserPanelViewController: UIViewController, UIWebViewDelegate {
         let username = UserDefaults.standard.string(forKey: "username") ?? ""
         let languageCode = Locale.preferredLanguages[0]
         
+        self.loadingView.isHidden = true
+        
         let url = "https://twfollo.com/conditional/twitter.php?user=" + username + "&language=" + languageCode
-//        let url = "twitter://buycredits"
         
         self.webView.loadRequest(URLRequest(url: URL(string: url)!))
     }

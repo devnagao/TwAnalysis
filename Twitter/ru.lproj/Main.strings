@@ -1,0 +1,207 @@
+
+/* Class = "UITextField"; placeholder = "example@example.com"; ObjectID = "0YO-UJ-5XR"; */
+"0YO-UJ-5XR.placeholder" = "example@example.com";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0en-O7-QV8"; */
+"0en-O7-QV8.text" = "Label";
+
+/* Class = "UILabel"; text = "1.99$"; ObjectID = "0wk-DI-yh9"; */
+"0wk-DI-yh9.text" = "1.99$";
+
+/* Class = "UILabel"; text = "SHOW (1.000"; ObjectID = "1oB-al-IFm"; */
+"1oB-al-IFm.text" = "Показать (1.000";
+
+/* Class = "UILabel"; text = "Average RT/post:"; ObjectID = "2et-aT-QVZ"; */
+"2et-aT-QVZ.text" = "Average RT/post:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "3Ny-3I-U38"; */
+"3Ny-3I-U38.text" = "0";
+
+/* Class = "UILabel"; text = "Follower change %:"; ObjectID = "3Qj-si-qxU"; */
+"3Qj-si-qxU.text" = "Follower change %:";
+
+/* Class = "UILabel"; text = "USER PANEL"; ObjectID = "6v1-7D-OdU"; */
+"6v1-7D-OdU.text" = "USER PANEL";
+
+/* Class = "UIButton"; normalTitle = "<"; ObjectID = "7KU-29-XpL"; */
+"7KU-29-XpL.normalTitle" = "<";
+
+/* Class = "UILabel"; text = "Tip 0/10"; ObjectID = "7KV-TK-8eI"; */
+"7KV-TK-8eI.text" = "Tip 0/10";
+
+/* Class = "UIButton"; normalTitle = "ANALYSIS"; ObjectID = "8Ck-vP-FKd"; */
+"8Ck-vP-FKd.normalTitle" = "ANALYSIS";
+
+/* Class = "UILabel"; text = "10.000 credits"; ObjectID = "92u-mM-aRw"; */
+"92u-mM-aRw.text" = "10.000 кредиты";
+
+/* Class = "UILabel"; text = "(since last week)"; ObjectID = "9ZO-yN-zJA"; */
+"9ZO-yN-zJA.text" = "(since last week)";
+
+/* Class = "UIButton"; normalTitle = "CONTINUE"; ObjectID = "BPO-sh-R6X"; */
+"BPO-sh-R6X.normalTitle" = "Продолжать";
+
+/* Class = "UILabel"; text = "EMAIL ADDRESS"; ObjectID = "CFM-hv-OjT"; */
+"CFM-hv-OjT.text" = "Электронный адрес";
+
+/* Class = "UIButton"; normalTitle = "Rate This App"; ObjectID = "CHK-Ux-1lF"; */
+"CHK-Ux-1lF.normalTitle" = "Оцени это приложение";
+
+/* Class = "UILabel"; text = "Average FAV/post:"; ObjectID = "DYf-CW-g2K"; */
+"DYf-CW-g2K.text" = "Average FAV/post:";
+
+/* Class = "UILabel"; text = "34.99$"; ObjectID = "Dzi-Ty-5eF"; */
+"Dzi-Ty-5eF.text" = "34.99$";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "E5c-kH-a7e"; */
+"E5c-kH-a7e.normalTitle" = "Продолжать";
+
+/* Class = "UILabel"; text = "xxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxx     xxxxxxxxxxxxxx."; ObjectID = "Eup-rC-dfR"; */
+"Eup-rC-dfR.text" = "xxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxx     xxxxxxxxxxxxxx.";
+
+/* Class = "UILabel"; text = "Tip 0/10"; ObjectID = "F9u-J0-FXq"; */
+"F9u-J0-FXq.text" = "Tip 0/10";
+
+/* Class = "UILabel"; text = "17.99$"; ObjectID = "FMY-pa-D0d"; */
+"FMY-pa-D0d.text" = "17.99$";
+
+/* Class = "UIButton"; normalTitle = "Change User"; ObjectID = "GYW-wQ-xt4"; */
+"GYW-wQ-xt4.normalTitle" = "Изменение имени пользователя";
+
+/* Class = "UILabel"; text = "Current Posts:"; ObjectID = "Gdg-ld-N14"; */
+"Gdg-ld-N14.text" = "Current Posts:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Gtc-tz-gYW"; */
+"Gtc-tz-gYW.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "CLOSE"; ObjectID = "IXk-hE-gVG"; */
+"IXk-hE-gVG.normalTitle" = "CLOSE";
+
+/* Class = "UILabel"; text = "6720 Followers"; ObjectID = "L5z-QO-EUl"; */
+"L5z-QO-EUl.text" = "6720 ПОДПИСЧИКИ";
+
+/* Class = "UILabel"; text = "Tip 0/10"; ObjectID = "LIA-Yw-9Pl"; */
+"LIA-Yw-9Pl.text" = "Tip 0/10";
+
+/* Class = "UILabel"; text = "MESSAGE"; ObjectID = "LtA-6K-qTY"; */
+"LtA-6K-qTY.text" = "Сообщение";
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "MJC-TS-NFj"; */
+"MJC-TS-NFj.normalTitle" = "Свяжитесь с нами";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MbB-EV-Glv"; */
+"MbB-EV-Glv.text" = "Label";
+
+/* Class = "UILabel"; text = "7.99$"; ObjectID = "NPv-lY-0UP"; */
+"NPv-lY-0UP.text" = "7.99$";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "O1u-Wb-Pi4"; */
+"O1u-Wb-Pi4.text" = "0";
+
+/* Class = "UILabel"; text = "Friends increase %:"; ObjectID = "ODf-FC-njM"; */
+"ODf-FC-njM.text" = "Friends increase %:";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "OeM-dn-v95"; */
+"OeM-dn-v95.text" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Buy Credits"; ObjectID = "Ok6-b7-FQT"; */
+"Ok6-b7-FQT.normalTitle" = "Купить кредиты";
+
+/* Class = "UILabel"; text = "TIP 1"; ObjectID = "P6f-oM-JIa"; */
+"P6f-oM-JIa.text" = "TIP 1";
+
+/* Class = "UIButton"; normalTitle = "Change User"; ObjectID = "PKs-iS-BaL"; */
+"PKs-iS-BaL.normalTitle" = "Изменение имени пользователя";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "Pki-Gi-MWo"; */
+"Pki-Gi-MWo.text" = "настройки";
+
+/* Class = "UILabel"; text = "(since last week)"; ObjectID = "QRL-kD-BLa"; */
+"QRL-kD-BLa.text" = "(since last week)";
+
+/* Class = "UILabel"; text = "with your credits"; ObjectID = "QXQ-gu-PwS"; */
+"QXQ-gu-PwS.text" = "with your credits";
+
+/* Class = "UILabel"; text = ")"; ObjectID = "RQ9-vR-EyJ"; */
+"RQ9-vR-EyJ.text" = ")";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "S67-sz-N3E"; */
+"S67-sz-N3E.text" = "0";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "TQB-my-nn4"; */
+"TQB-my-nn4.title" = "Home";
+
+/* Class = "UILabel"; text = "500 credits"; ObjectID = "Y3N-Ai-0NG"; */
+"Y3N-Ai-0NG.text" = "500 кредиты";
+
+/* Class = "UIButton"; normalTitle = "CONTINUE"; ObjectID = "YN8-kB-hiH"; */
+"YN8-kB-hiH.normalTitle" = "Продолжать";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "aNQ-Fr-xac"; */
+"aNQ-Fr-xac.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "bNt-UN-AXd"; */
+"bNt-UN-AXd.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "Other Apps"; ObjectID = "bbd-3a-cps"; */
+"bbd-3a-cps.normalTitle" = "Другие приложения";
+
+/* Class = "UIButton"; normalTitle = "SEND"; ObjectID = "d8w-dK-2Rx"; */
+"d8w-dK-2Rx.normalTitle" = "послать";
+
+/* Class = "UILabel"; text = "Current Follower:"; ObjectID = "dDh-PL-qdf"; */
+"dDh-PL-qdf.text" = "Current Follower:";
+
+/* Class = "UILabel"; text = "64.99$"; ObjectID = "dJh-MU-ri9"; */
+"dJh-MU-ri9.text" = "64.99$";
+
+/* Class = "UILabel"; text = "to buy follower and RT-FAV"; ObjectID = "e2Q-qa-1rb"; */
+"e2Q-qa-1rb.text" = "to buy follower and RT-FAV";
+
+/* Class = "UIButton"; normalTitle = "USER PANEL"; ObjectID = "ejO-pW-f7k"; */
+"ejO-pW-f7k.normalTitle" = "USER PANEL";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "ekW-hs-IQQ"; */
+"ekW-hs-IQQ.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "<"; ObjectID = "f9W-bz-MCx"; */
+"f9W-bz-MCx.normalTitle" = "<";
+
+/* Class = "UILabel"; text = "Angelina"; ObjectID = "fzy-hO-E0L"; */
+"fzy-hO-E0L.text" = "Angelina";
+
+/* Class = "UILabel"; text = "250 credits"; ObjectID = "g7i-nT-lno"; */
+"g7i-nT-lno.text" = "250 кредиты";
+
+/* Class = "UILabel"; text = "WELCOME"; ObjectID = "j2T-lU-hXd"; */
+"j2T-lU-hXd.text" = "желанный";
+
+/* Class = "UILabel"; text = "WELCOME"; ObjectID = "mHS-rf-w01"; */
+"mHS-rf-w01.text" = "желанный";
+
+/* Class = "UILabel"; text = "Current Friends:"; ObjectID = "t1i-uQ-Aqa"; */
+"t1i-uQ-Aqa.text" = "Current Friends:";
+
+/* Class = "UILabel"; text = "WELCOME"; ObjectID = "udt-Nr-5ag"; */
+"udt-Nr-5ag.text" = "желанный";
+
+/* Class = "UIButton"; normalTitle = "Share This App"; ObjectID = "vRE-12-KNr"; */
+"vRE-12-KNr.normalTitle" = "Поделись этим приложением";
+
+/* Class = "UILabel"; text = "Buy Credits"; ObjectID = "vpL-Ay-tFm"; */
+"vpL-Ay-tFm.text" = "Купить кредиты";
+
+/* Class = "UILabel"; text = "3.99$"; ObjectID = "w7F-ws-p9g"; */
+"w7F-ws-p9g.text" = "3.99$";
+
+/* Class = "UILabel"; text = "5.000 credits"; ObjectID = "wbD-Ir-Zb2"; */
+"wbD-Ir-Zb2.text" = "5.000 кредиты";
+
+/* Class = "UILabel"; text = "Go to your user panel"; ObjectID = "wgH-Ze-5Ko"; */
+"wgH-Ze-5Ko.text" = "Go to your user panel";
+
+/* Class = "UILabel"; text = "2.500 credits"; ObjectID = "yvd-PH-tJR"; */
+"yvd-PH-tJR.text" = "2.500 кредиты";
+
+/* Class = "UILabel"; text = "1.000 credits"; ObjectID = "zP3-Nw-LbU"; */
+"zP3-Nw-LbU.text" = "1.000 кредиты";

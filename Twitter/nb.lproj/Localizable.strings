@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="Velkommen";
+"Enter your twitter username:"="Skriv inn din twitter brukernavn:";
+"Continue"="Fortsette";
+"Change Username"="Endre brukernavn";
+"Followers"="Følgere";
+"RT-FAV"="RT-FAV";
+"are on the way."="er på vei.";
+"Welcome to the best application on the market to learn how to increase your followers."="Velkommen til det beste programmet på markedet for å lære hvordan du kan øke dine etterfølgere.";
+"Start"="Start";
+"Buy Credits"="Kjøp Credits";
+"Settings"="innstillinger";
+"Credits"="studiepoeng";
+"Open your user panel to buy followers and RT-FAV with your credits."="Åpne brukerpanel for å kjøpe tilhengere og RT-FAV med studiepoeng.";
+"Close"="Lukk";
+"Do you want to see other applications of us?"="Ønsker du å se andre anvendelser av oss?";
+"Yes"="Ja";
+"No"="Nei";
+"Tips"="Tips";
+"Show"="Forestilling";
+"Contact Us"="Kontakt oss";
+"Rate This App"="Ranger denne appen";
+"Share This App"="Del denne appen";
+"Other Apps"="andre Apps";
+"Email Adress"="Epost adresse";
+"Message"="Budskap";
+"Send"="Sende";
+"Message Sent!"="Melding sendt!";
+"Failed!"="Feilet!";
+"Invalid Mail Adress!"="Ugyldig post adresse!";
+"Your account is private. Please make your account public."="Kontoen din er privat. Vennligst konto publikum.";

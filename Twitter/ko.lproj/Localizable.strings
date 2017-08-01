@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="환영";
+"Enter your twitter username:"="트위터 사용자 이름을 입력합니다 :";
+"Continue"="잇다";
+"Change Username"="변경 아이디";
+"Followers"="팔로워";
+"RT-FAV"="RT-FAV";
+"are on the way."="길에 있습니다.";
+"Welcome to the best application on the market to learn how to increase your followers."="팔로워를 늘리는 방법을 배울 수있는 시장에서 최고의 응용 프로그램에 오신 것을 환영합니다.";
+"Start"="스타트";
+"Buy Credits"="크레딧 구매";
+"Settings"="설정";
+"Credits"="크레딧";
+"Open your user panel to buy followers and RT-FAV with your credits."="귀하의 크레딧과 추종자 및 RT-FAV를 구입하는 사용자 패널을 엽니다.";
+"Close"="닫기";
+"Do you want to see other applications of us?"="당신은 우리의 다른 응용 프로그램을보고 싶으십니까?";
+"Yes"="예";
+"No"="아니";
+"Tips"="팁";
+"Show"="보여 주다";
+"Contact Us"="문의";
+"Rate This App"="이 앱을 평가 해주세요";
+"Share This App"="이 응용 프로그램 공유";
+"Other Apps"="다른 앱";
+"Email Adress"="이메일 주소";
+"Message"="메시지";
+"Send"="보내다";
+"Message Sent!"="메시지 전송 됨!";
+"Failed!"="실패한!";
+"Invalid Mail Adress!"="잘못된 메일 ADRESS!";
+"Your account is private. Please make your account public."="귀하의 계정은 비공개입니다. 계정을 공개하십시오.";

@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="Välkommen";
+"Enter your twitter username:"="Ange din twitter användarnamn:";
+"Continue"="Fortsätta";
+"Change Username"="Ändra användarnamn";
+"Followers"="Följare";
+"RT-FAV"="RT-FAV";
+"are on the way."="är på väg.";
+"Welcome to the best application on the market to learn how to increase your followers."="Välkommen till det bästa programmet på marknaden för att lära sig att öka din anhängare.";
+"Start"="Start";
+"Buy Credits"="Köp Krediter";
+"Settings"="inställningar";
+"Credits"="Credits";
+"Open your user panel to buy followers and RT-FAV with your credits."="Öppna användarpanelen för att köpa anhängare och RT-FAV med dina poäng.";
+"Close"="Stänga";
+"Do you want to see other applications of us?"="Vill du se andra tillämpningar av oss?";
+"Yes"="Ja";
+"No"="Nej";
+"Tips"="tips";
+"Show"="Show";
+"Contact Us"="Kontakta oss";
+"Rate This App"="Betygsätt denna app";
+"Share This App"="Dela denna appen";
+"Other Apps"="Andra appar";
+"Email Adress"="E-postadress";
+"Message"="Meddelande";
+"Send"="Skicka";
+"Message Sent!"="Meddelande skickat!";
+"Failed!"="Misslyckades!";
+"Invalid Mail Adress!"="Ogiltig postadress!";
+"Your account is private. Please make your account public."="Ditt konto är privat. Vänligen offentliggöra ditt konto.";

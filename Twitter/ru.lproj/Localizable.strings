@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="желанный";
+"Enter your twitter username:"="Введите свой щебет имя пользователя:";
+"Continue"="Продолжать";
+"Change Username"="Изменение имени пользователя";
+"Followers"="ПОДПИСЧИКИ";
+"RT-FAV"="РТ-FAV";
+"are on the way."="находятся на пути.";
+"Welcome to the best application on the market to learn how to increase your followers."="Добро пожаловать на лучшее приложение на рынке, чтобы узнать, как увеличить ваши последователи.";
+"Start"="Начало";
+"Buy Credits"="Купить кредиты";
+"Settings"="настройки";
+"Credits"="кредиты";
+"Open your user panel to buy followers and RT-FAV with your credits."="Откройте панель пользователя, чтобы купить последователь и RT-FAV с кредитами.";
+"Close"="Закрыть";
+"Do you want to see other applications of us?"="Вы хотите, чтобы увидеть другие приложения из нас?";
+"Yes"="да";
+"No"="нет";
+"Tips"="Советы";
+"Show"="Показать";
+"Contact Us"="Свяжитесь с нами";
+"Rate This App"="Оцени это приложение";
+"Share This App"="Поделись этим приложением";
+"Other Apps"="Другие приложения";
+"Email Adress"="Электронный адрес";
+"Message"="Сообщение";
+"Send"="послать";
+"Message Sent!"="Сообщение отправлено!";
+"Failed!"="Не смогли!";
+"Invalid Mail Adress!"="Неверная почта Адрес!";
+"Your account is private. Please make your account public."="Ваша учетная запись является частным. Пожалуйста, сделайте ваш счет общественности.";

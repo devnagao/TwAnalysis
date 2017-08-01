@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome" = "Hoşgeldiniz";
+"Enter your twitter username:" = "Lütfen twitter adınızı girin:";
+"Continue" = "Devam et";
+"Change Username" = "Kullanıcı adını değiştir";
+"Followers" = "Takipçi";
+"RT-FAV" = "RT-favori";
+"are on the way." = "yolda.";
+"Welcome to the best application on the market to learn how to increase your followers." = "Takipçilerinizi artırmayı öğrenmek için piyasadaki en iyi uygulamaya hoş geldiniz.";
+"Start" = "Başla";
+"Buy Credits" = "Kredi satın al";
+"Settings" = "Ayarlar";
+"Credits" = "Kredi";
+"Open your user panel to buy followers and RT-FAV with your credits." = "kredileriniz ile takipçileri ve RT-FAV satın almak için kullanıcı panelini açın.";
+"Close" = "Kapat";
+"Do you want to see other applications of us?" = "Bizden diğer uygulamaları görmek ister misin?";
+"Yes" = "Evet";
+"No" = "Yok hayır";
+"Tips" = "İpuçları";
+"Show" = "Göstermek";
+"Contact Us" = "Bizimle iletişime geçin";
+"Rate This App" = "Bu uygulamayı oyla";
+"Share This App" = "Bu uygulamayı paylaş";
+"Other Apps" = "Diğer uygulamalar";
+"Email Adress" = "E-posta adresi";
+"Message" = "Mesaj";
+"Send" = "göndermek";
+"Message Sent!" = "Mesajı gönderildi!";
+"Failed!" = "Başarısız oldu!";
+"Invalid Mail Adress!" = "Geçersiz Mail Adresi!";
+"Your account is private. Please make your account public." = "Hesabınız özeldir. Hesap genel hale getirin.";

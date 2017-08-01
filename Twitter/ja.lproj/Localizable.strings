@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="ようこそ";
+"Enter your twitter username:"="Twitterのユーザー名を入力します。";
+"Continue"="持続する";
+"Change Username"="変更ユーザー名";
+"Followers"="フォロワー";
+"RT-FAV"="RT-FAV";
+"are on the way."="途中にあります。";
+"Welcome to the best application on the market to learn how to increase your followers."="あなたのフォロワーを増やす方法については、市場で最高のアプリケーションへようこそ。";
+"Start"="開始";
+"Buy Credits"="クレジットの購入";
+"Settings"="設定";
+"Credits"="クレジット";
+"Open your user panel to buy followers and RT-FAV with your credits."="あなたのクレジットでフォロワーとRT-FAVを購入するユーザーのパネルを開きます。";
+"Close"="閉じる";
+"Do you want to see other applications of us?"="あなたは私たちの他のアプリケーションを見たいと思っていますか？";
+"Yes"="はい";
+"No"="ノー";
+"Tips"="ヒント";
+"Show"="ショー";
+"Contact Us"="お問い合わせ";
+"Rate This App"="レートこのアプリ";
+"Share This App"="このアプリを共有します";
+"Other Apps"="他のアプリ";
+"Email Adress"="メールアドレス";
+"Message"="メッセージ";
+"Send"="送ります";
+"Message Sent!"="メッセージが送信します！";
+"Failed!"="失敗しました！";
+"Invalid Mail Adress!"="無効のメール住所！";
+"Your account is private. Please make your account public."="あなたのアカウントはプライベートです。あなたのアカウントを公開してください。";

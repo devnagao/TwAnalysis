@@ -37,7 +37,7 @@ class TipDetailVC: UIViewController {
         totalTip = Int(AppData.shared.jsonData["totaltip"] as! CFNumber)
         tipCost = Int(AppData.shared.jsonData["tipcost"] as! CFNumber)
         
-        self.lblShowButton.text = "SHOW (" + String(tipCost)
+        self.lblShowButton.text = NSLocalizedString("Show", comment: "") + " (" + String(tipCost)
         
         self.loadingView.isHidden = true
         self.lblTipContent.text = "xxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxx     xxxxxxxxxxxxxx."
@@ -84,7 +84,7 @@ class TipDetailVC: UIViewController {
         
         let credits = AppData.shared.credits
         if credits < tipCost {
-            self.showDefaultAlert(title: "", message: "Your need more credits to show.")
+            self.showDefaultAlert(title: "", message: "You need more credits to show.")
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gotobuycredits"), object: nil)
             return
         }
@@ -139,7 +139,7 @@ class TipDetailVC: UIViewController {
     
     func showTip() {
         tipCost = Int(AppData.shared.jsonData["tipcost"] as! CFNumber)
-        self.lblShowButton.text = "SHOW (" + String(tipCost)
+        self.lblShowButton.text = NSLocalizedString("Show", comment: "") + " (" + String(tipCost)
 
         if (tipCounter >= 10) {
             self.btnNext.isHidden = true

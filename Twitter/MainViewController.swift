@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.initViews()
         
         NotificationCenter.default.addObserver(self, selector: #selector(refreshViews), name: NSNotification.Name(rawValue: "refresh"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoHome), name: NSNotification.Name(rawValue: "gotohome"), object: nil)
@@ -49,6 +50,7 @@ class MainViewController: UIViewController {
             self.gotoBuyCredits()
         }
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,27 +62,22 @@ class MainViewController: UIViewController {
         self.initViews()
     }
 
-    override func viewWillLayoutSubviews() {
-        super .viewWillLayoutSubviews()
-        self.initViews()
-    }
-    
     func initViews() {
         self.imgProfile.layer.borderColor = UIColor.white.cgColor
         self.imgProfile.layer.borderWidth = 3
         self.imgProfile.layer.cornerRadius = self.imgProfile.bounds.size.height / 2.0
         
-        let imageURLString = AppData.shared.jsonData["imageurl"] as? String
+        let imageURLString = AppData.shared.jsonData["imageurl"] as! String
         if (imageURLString != "") {
-            let imageUrl : URL = URL(string: imageURLString!)!
+            let imageUrl : URL = URL(string: imageURLString)!
             
             DispatchQueue.global(qos: .userInitiated).async {
                 
-                let imageData:NSData = NSData(contentsOf: imageUrl)!
+                let imageData: NSData = NSData(contentsOf: imageUrl)!
                 
                 // When from background thread, UI needs to be updated on main_queue
                 DispatchQueue.main.async {
-                    let image = UIImage(data: imageData as Data)
+                    let image = UIImage(data: imageData as Data)!
                     self.imgProfile.image = image
                 }
             }
@@ -92,7 +89,7 @@ class MainViewController: UIViewController {
         self.lblCredits.text = String(AppData.shared.credits)
         let followCount = AppData.shared.jsonData["followercount"] as? String ?? "0"
         
-        self.lblFollowerCount.text = followCount + " Followers"
+        self.lblFollowerCount.text = followCount + " " + NSLocalizedString("Followers", comment: "")
     }
     
     @IBAction func onHomeTab(_ sender: Any) {
@@ -144,7 +141,10 @@ class MainViewController: UIViewController {
     }
     
     func gotoChangeUser() {
-        self.navigationController?.popToRootViewController(animated: true)
+        
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+        
+        self.navigationController?.pushViewController(loginVC!, animated: true)
     }
     
     
@@ -176,5 +176,8 @@ class MainViewController: UIViewController {
     func gotoUserPanel() {
         let vc : UserPanelViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserPanelViewController") as! UserPanelViewController
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gotoUserPanel), name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
     }
 }

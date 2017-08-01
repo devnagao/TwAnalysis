@@ -19,6 +19,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var loadingImageView: UIImageView!
     
+    @IBOutlet weak var btnBack: UIButton!
+    
+    let greenColor: UIColor = UIColor(colorLiteralRed: 49/255.0, green: 187/255.0, blue: 29/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.btnContinue.layer.cornerRadius = 3
         
         self.txtUsername.text = UserDefaults.standard.string(forKey: "username")
-        if (self.txtUsername.text != "") {
+        if (self.txtUsername.text != "" && self == self.navigationController?.viewControllers[0]) {
             self.login()
         }
         
@@ -38,7 +41,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (self == self.navigationController?.viewControllers[0])
+        {
+            self.btnBack.isHidden = true            
+        }
+        
+        if (self.txtUsername.text == "") {
+            self.btnContinue.isEnabled = false
+            self.btnContinue.backgroundColor = UIColor.gray
+        } else {
+            self.btnContinue.isEnabled = true
+            self.btnContinue.backgroundColor = greenColor
+        }
+    }
+    
     func login() {
+        
+        if (txtUsername.text != "") {
+            self.btnContinue.isEnabled = true
+            self.btnContinue.backgroundColor = greenColor
+        } else {
+            self.btnContinue.isEnabled = false
+            self.btnContinue.backgroundColor = UIColor.gray
+            return
+        }
+        
         let urlString: String = "https://twfollo.com/retweet/twapi.php"
         let param: [String: Any] = ["twusername333": self.txtUsername.text!]
         
@@ -79,7 +109,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 UserDefaults.standard.set(self.txtUsername.text, forKey: "username")
                 AppData.shared.jsonData = json
-                AppData.shared.credits = Int(json["credits"] as! CFNumber)
+                
+                var credits: Int = 0
+                guard let creditsString = json["credits"] as? String else {
+                    credits = 0
+                    AppData.shared.credits = credits
+                    
+                    let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                    self.navigationController?.pushViewController(mainVC, animated: true)
+                    return
+                }
+                credits = Int(creditsString)!
+                
+                AppData.shared.credits = credits
                 
                 let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
                 self.navigationController?.pushViewController(mainVC, animated: true)
@@ -87,11 +129,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onContinue(_ sender: Any) {
-        
         self.txtUsername.resignFirstResponder()
         self.login()
     }
-    
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -99,6 +139,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.login()
         return true
     }
+    
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxLength = 30
@@ -113,6 +155,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS).inverted
         let filtered = (string.components(separatedBy: cs)).joined(separator: "")
+        
+        if (textField.text != "") {
+            self.btnContinue.isEnabled = true
+            self.btnContinue.backgroundColor = greenColor
+        } else {
+            self.btnContinue.isEnabled = false
+            self.btnContinue.backgroundColor = UIColor.gray
+        }
         
         return string == filtered
     }
@@ -141,11 +191,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func showDefaultAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        let okAction = UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
         alertController.addAction(okAction)
         
         self.present(alertController, animated: true, completion: nil)
     }
 
+    
+    @IBAction func onBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 

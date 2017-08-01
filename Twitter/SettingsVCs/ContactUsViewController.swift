@@ -43,7 +43,7 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
         }
         
         if (!self.isValidEmail(testStr: self.txtEmail.text!)) {
-            self.showDefaultAlert(title: "", message: "Invalid Mail address.")
+            self.showDefaultAlert(title: "", message: NSLocalizedString("Invalid Mail Adress!", comment: ""))
             return
         }
         
@@ -60,7 +60,7 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
         
         if (!isInternetAvailable()) {
             self.loadingView.isHidden = true
-            self.showDefaultAlert(title: "Failed", message: "There is no internet connection.")
+            self.showDefaultAlert(title: NSLocalizedString("Failed!", comment: ""), message: "There is no internet connection.")
             return
         }
         
@@ -74,13 +74,13 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
                     
-                    self.showDefaultAlert(title: "Failed", message: "")
+                    self.showDefaultAlert(title: NSLocalizedString("Failed!", comment: ""), message: "")
                     print(response.result.error!)
                     return
                 }
                 // make sure we got some JSON since that's what we expect
                 guard let result = response.result.value as? String else {
-                    self.showDefaultAlert(title: "Failed", message: "")
+                    self.showDefaultAlert(title: NSLocalizedString("Failed!", comment: ""), message: "")
                     
                     print("didn't get todo object as JSON from API")
                     print("Error: \(String(describing: response.result.error))")
@@ -88,8 +88,8 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
                 }
                 
                 if (result == "1") {
-                    let alertController = UIAlertController(title: "", message: "Message Sent", preferredStyle: UIAlertControllerStyle.alert)
-                    let okAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: { (action) in
+                    let alertController = UIAlertController(title: "", message: NSLocalizedString("Message Sent!", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
+                    let okAction = UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: UIAlertActionStyle.default, handler: { (action) in
                         self.navigationController?.popViewController(animated: true)
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gotohome"), object: nil)
                     })
@@ -99,7 +99,7 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
                     
                 } else {
                     let alertController = UIAlertController(title: "", message: "Message Failed-Try Again", preferredStyle: UIAlertControllerStyle.alert)
-                    let okAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: { (action) in
+                    let okAction = UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: UIAlertActionStyle.default, handler: { (action) in
                         self.navigationController?.popViewController(animated: true)
                     })
                     alertController.addAction(okAction)
@@ -167,7 +167,7 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
     func showDefaultAlert(title: String, message: String) {
         
         let alertController = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        let okAction = UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
         alertController.addAction(okAction)
         
         self.present(alertController, animated: true, completion: nil)

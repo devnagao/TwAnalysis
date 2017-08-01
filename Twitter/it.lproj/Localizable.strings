@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Twitter
+
+  Created by Dev on 8/1/17.
+  Copyright © 2017 Dev. All rights reserved.
+*/
+"Welcome"="benvenuto";
+"Enter your twitter username:"="Inserisci il tuo nome utente Twitter:";
+"Continue"="Continua";
+"Change Username"="Cambia nome utente";
+"Followers"="Seguaci";
+"RT-FAV"="RT-FAV";
+"are on the way."="sono sulla strada.";
+"Welcome to the best application on the market to learn how to increase your followers."="Benvenuto nella migliore applicazione sul mercato per informazioni su come aumentare i tuoi seguaci.";
+"Start"="Inizio";
+"Buy Credits"="Acquista Crediti";
+"Settings"="impostazioni";
+"Credits"="Crediti";
+"Open your user panel to buy followers and RT-FAV with your credits."="Aprire il pannello di utente ad acquistare seguaci e RT-FAV con i vostri crediti.";
+"Close"="Vicino";
+"Do you want to see other applications of us?"="Vuoi vedere altre applicazioni di noi?";
+"Yes"="sì";
+"No"="No";
+"Tips"="Suggerimenti";
+"Show"="Mostrare";
+"Contact Us"="Contattaci";
+"Rate This App"="Valuta questa applicazione";
+"Share This App"="Condividi questa app";
+"Other Apps"="Altre app";
+"Email Adress"="Indirizzo email";
+"Message"="Messaggio";
+"Send"="Inviare";
+"Message Sent!"="Messaggio inviato!";
+"Failed!"="Fallito!";
+"Invalid Mail Adress!"="Non valido di posta Indirizzo!";
+"Your account is private. Please make your account public."="Il tuo account è privato. Si prega di fare il vostro pubblico.";
