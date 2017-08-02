@@ -19,10 +19,18 @@ class ContactUsViewController: UIViewController , UITextFieldDelegate, UITextVie
     @IBOutlet weak var imgLoading: UIImageView!
     
     
+    @IBOutlet weak var lblEmailAddress: UILabel!
+    @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var btnSend: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.lblEmailAddress.text = NSLocalizedString("Email Adress", comment: "")
+        self.lblMessage.text = NSLocalizedString("Message", comment: "")
+        self.btnSend.setTitle(NSLocalizedString("Send", comment: ""), for: .normal)
     }
 
     override func didReceiveMemoryWarning() {

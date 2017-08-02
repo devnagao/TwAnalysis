@@ -149,8 +149,8 @@ class TipDetailVC: UIViewController {
             self.btnContinue.isHidden = false
         }
         
-        self.lblTipCounter.text = "Tip " + String(tipCounter) + "/" + String(totalTip)
-        self.lblTipTitle.text = "TIP " + String(tipCounter)
+        self.lblTipCounter.text = NSLocalizedString("Tips", comment: "") + " " + String(tipCounter) + "/" + String(totalTip)
+        self.lblTipTitle.text = NSLocalizedString("Tips", comment: "") + " " + String(tipCounter)
         
         self.lblTipContent.text = "xxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxx     xxxxxxxxxxxxxx."
         
@@ -160,7 +160,7 @@ class TipDetailVC: UIViewController {
     
     func showTipContent() {
         
-        let tipString = "tip" + String(tipCounter)
+        let tipString = NSLocalizedString("Tips", comment: "") + String(tipCounter)
         self.lblTipContent.text = AppData.shared.jsonData[tipString] as? String ?? ""
 
         self.btnShow.isHidden = true

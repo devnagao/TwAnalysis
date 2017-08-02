@@ -24,10 +24,13 @@ class AnalysisVC: UIViewController {
     @IBOutlet weak var lblAverageRT: UILabel!
     @IBOutlet weak var lblAverageFAV: UILabel!
     
+    @IBOutlet weak var btnContinue: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.btnContinue.setTitle(NSLocalizedString("Continue", comment: ""), for: .normal)
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.imgLoading.image = gif

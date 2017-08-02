@@ -17,12 +17,24 @@ class BuyCreditsViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var imgLoading: UIImageView!
     
+    @IBOutlet weak var lbl250Credits: UILabel!
+    @IBOutlet weak var lbl500Credits: UILabel!
+    @IBOutlet weak var lbl1000Credits: UILabel!
+    @IBOutlet weak var lbl2500Credits: UILabel!
+    @IBOutlet weak var lbl5000Credits: UILabel!
+    @IBOutlet weak var lbl10000Credits: UILabel!
+    
+    
+    
+    
     var resultString: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setLabels()
+        
         self.loadingView.isHidden = true
         
         var productIdentifiers = Set<ProductIdentifier>()
@@ -52,8 +64,17 @@ class BuyCreditsViewController: UIViewController {
             print(self.resultString)
         }
         
+    }
+    
+    func setLabels() {
+        self.lbl250Credits.text = "250 " + NSLocalizedString("Credits", comment: "")
+        self.lbl500Credits.text = "500 " + NSLocalizedString("Credits", comment: "")
+        self.lbl1000Credits.text = "1000 " + NSLocalizedString("Credits", comment: "")
+        self.lbl2500Credits.text = "2500 " + NSLocalizedString("Credits", comment: "")
+        self.lbl5000Credits.text = "5000 " + NSLocalizedString("Credits", comment: "")
+        self.lbl10000Credits.text = "10000 " + NSLocalizedString("Credits", comment: "")
         
-
+        
     }
 
     override func didReceiveMemoryWarning() {

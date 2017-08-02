@@ -24,6 +24,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var viewBuyCredits: UIView!
     @IBOutlet weak var viewSettings: UIView!
     
+    @IBOutlet weak var lblHomeTab: UILabel!
+    @IBOutlet weak var lblBuycreditsTab: UILabel!
+    @IBOutlet weak var lblSettingsTab: UILabel!
+    
+    @IBOutlet weak var btnChangeUser: UIButton!
+    
+    
     var openUrlId: String = ""
     
     override func viewDidLoad() {
@@ -63,6 +70,7 @@ class MainViewController: UIViewController {
     }
 
     func initViews() {
+        
         self.imgProfile.layer.borderColor = UIColor.white.cgColor
         self.imgProfile.layer.borderWidth = 3
         self.imgProfile.layer.cornerRadius = self.imgProfile.bounds.size.height / 2.0
@@ -90,6 +98,14 @@ class MainViewController: UIViewController {
         let followCount = AppData.shared.jsonData["followercount"] as? String ?? "0"
         
         self.lblFollowerCount.text = followCount + " " + NSLocalizedString("Followers", comment: "")
+        
+        self.lblHomeTab.text = NSLocalizedString("Start", comment: "")
+        self.lblBuycreditsTab.text = NSLocalizedString("Buy Credits", comment: "")
+        self.lblSettingsTab.text = NSLocalizedString("Settings", comment: "")
+        
+        self.btnChangeUser.setTitle(NSLocalizedString("Change Username", comment: ""), for: .normal)
+        
+        
     }
     
     @IBAction func onHomeTab(_ sender: Any) {

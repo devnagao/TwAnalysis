@@ -9,11 +9,29 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var btnContactUs: UIButton!
+    @IBOutlet weak var btnRate: UIButton!
+    @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var btnOther: UIButton!
+    @IBOutlet weak var btnChange: UIButton!
+    @IBOutlet weak var btnBuyCredits: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        self.btnContactUs.setTitle(self.getLocalizedString(string: "Contact Us"), for: .normal)
+        self.btnRate.setTitle(self.getLocalizedString(string: "Rate This App"), for: .normal)
+        self.btnShare.setTitle(self.getLocalizedString(string: "Share This App"), for: .normal)
+        self.btnOther.setTitle(self.getLocalizedString(string: "Other Apps"), for: .normal)
+        self.btnChange.setTitle(self.getLocalizedString(string: "Change Username"), for: .normal)
+        self.btnBuyCredits.setTitle(self.getLocalizedString(string: "Buy Credits"), for: .normal)
+        
+    }
+    
+    func getLocalizedString(string: String) -> String {
+        return NSLocalizedString(string, comment: "")
     }
 
     override func didReceiveMemoryWarning() {

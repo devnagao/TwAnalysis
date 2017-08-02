@@ -20,15 +20,16 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var userpanelView: UIView!
     
+    @IBOutlet weak var lblWelcome: UILabel!
     @IBOutlet weak var lblUserPanelContents: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let status = Int(AppData.shared.jsonData["status"] as! String) ?? 0
-        if (status > 0) {
-            self.lblStatus.text = String(status) + " " + NSLocalizedString("Followers", comment: "") + NSLocalizedString("are on the way.", comment: "")
+        let status = Int(AppData.shared.jsonData["status"] as! String)
+        if (status! > 0) {
+            self.lblStatus.text = String(describing: status) + " " + NSLocalizedString("Followers", comment: "") + NSLocalizedString("are on the way.", comment: "")
         } else {
             self.statusHeight.constant = 0;
             self.view.layoutIfNeeded()
@@ -36,7 +37,7 @@ class HomeViewController: UIViewController {
             
         let retordersCount = AppData.shared.jsonData["retorderscount"] as! Int
         if (retordersCount > 0) {
-            self.lblRetordersCount.text = String(retordersCount) + " " + NSLocalizedString("RT-FAV orders", comment: "") + NSLocalizedString("are on the way.", comment: "") 
+            self.lblRetordersCount.text = String(retordersCount) + " " + NSLocalizedString("RT-FAV orders", comment: "") + NSLocalizedString("are on the way.", comment: "")
         } else {
             self.retordersCountHeight.constant = 0;
             self.view.layoutIfNeeded()
@@ -51,6 +52,7 @@ class HomeViewController: UIViewController {
             self.userpanelView.isHidden = false
         }
         
+        lblWelcome.text = NSLocalizedString("Welcome", comment: "")
         lblUserPanelContents.text = NSLocalizedString("Open your user panel to buy followers and RT-FAV with your credits.", comment: "")
         
     }

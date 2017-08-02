@@ -21,6 +21,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var btnBack: UIButton!
     
+    @IBOutlet weak var lblNavTitle: UILabel!
+    @IBOutlet weak var lblTwitterName: UILabel!
+    
+    
     let greenColor: UIColor = UIColor(colorLiteralRed: 49/255.0, green: 187/255.0, blue: 29/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
@@ -34,6 +38,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.login()
         }
         
+        self.lblNavTitle.text = NSLocalizedString("Welcome", comment: "")
+        self.lblTwitterName.text = NSLocalizedString("Enter your twitter username:", comment: "")
+        self.btnContinue.setTitle(NSLocalizedString("Continue", comment: ""), for: UIControlState.normal)
     }
 
     override func didReceiveMemoryWarning() {

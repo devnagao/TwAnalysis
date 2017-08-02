@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-bz-MCx">
-                                        <rect key="frame" x="15" y="17" width="30" height="48"/>
+                                        <rect key="frame" x="15" y="16" width="30" height="48"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="36"/>
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,7 +45,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2T-lU-hXd">
-                                        <rect key="frame" x="145" y="31" width="86.5" height="20"/>
+                                        <rect key="frame" x="145" y="30.5" width="86.5" height="20"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -160,6 +160,8 @@
                     <connections>
                         <outlet property="btnBack" destination="f9W-bz-MCx" id="pXL-d8-Fwc"/>
                         <outlet property="btnContinue" destination="E5c-kH-a7e" id="JIs-0g-WK6"/>
+                        <outlet property="lblNavTitle" destination="j2T-lU-hXd" id="8XZ-FD-FSu"/>
+                        <outlet property="lblTwitterName" destination="1CD-Wl-tJo" id="TPv-zb-5dt"/>
                         <outlet property="loadingImageView" destination="aLD-aQ-sdH" id="Y2g-SE-aAA"/>
                         <outlet property="loadingView" destination="jKy-li-NYv" id="W9l-BY-2UO"/>
                         <outlet property="txtUsername" destination="MVz-Ct-CWd" id="EJA-RU-tzK"/>
@@ -186,7 +188,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-iS-BaL">
-                                        <rect key="frame" x="0.0" y="22.5" width="125" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="107" height="32.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                         <state key="normal" title="Change User">
@@ -203,7 +205,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S67-sz-N3E">
-                                        <rect key="frame" x="312.5" y="28" width="10.5" height="20"/>
+                                        <rect key="frame" x="312.5" y="27.5" width="10.5" height="20"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -218,7 +220,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angelina" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-hO-E0L">
-                                        <rect key="frame" x="146.5" y="169" width="82.5" height="28"/>
+                                        <rect key="frame" x="147" y="169" width="82.5" height="28"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -231,7 +233,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6720 Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5z-QO-EUl">
-                                        <rect key="frame" x="119" y="198" width="137.5" height="28"/>
+                                        <rect key="frame" x="119.5" y="198" width="137.5" height="28"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -260,7 +262,6 @@
                                     <constraint firstAttribute="bottom" secondItem="o8J-EG-6NI" secondAttribute="bottom" constant="4" id="jsk-qD-5rX"/>
                                     <constraint firstItem="o8J-EG-6NI" firstAttribute="top" secondItem="Eil-GM-qqJ" secondAttribute="bottom" constant="1" id="m8N-kQ-hFt"/>
                                     <constraint firstItem="gSB-vF-xkL" firstAttribute="width" secondItem="L5z-QO-EUl" secondAttribute="width" multiplier="1.2:1" id="p9t-EB-ezM"/>
-                                    <constraint firstItem="PKs-iS-BaL" firstAttribute="width" secondItem="uPM-5a-d2a" secondAttribute="width" multiplier="250:750" id="uPN-pC-RG3"/>
                                     <constraint firstAttribute="trailing" secondItem="Eil-GM-qqJ" secondAttribute="trailing" multiplier="750:725" id="vLE-JH-Xm5"/>
                                     <constraint firstItem="fzy-hO-E0L" firstAttribute="top" secondItem="rS5-N2-LwQ" secondAttribute="bottom" constant="8" id="y0M-pY-YMZ"/>
                                     <constraint firstItem="Eil-GM-qqJ" firstAttribute="height" secondItem="uPM-5a-d2a" secondAttribute="height" multiplier="70:468" id="zYS-VR-zDS"/>
@@ -481,11 +482,15 @@
                     </view>
                     <connections>
                         <outlet property="btnBuyCreditsTab" destination="ghW-bo-xvb" id="CMC-NP-EWd"/>
+                        <outlet property="btnChangeUser" destination="PKs-iS-BaL" id="seG-kJ-o41"/>
                         <outlet property="btnHomeTab" destination="ZMY-T8-QrB" id="YA8-XP-cD9"/>
                         <outlet property="btnSettingsTab" destination="nNp-Ew-js2" id="ZuM-WM-fTG"/>
                         <outlet property="imgProfile" destination="rS5-N2-LwQ" id="Etl-yN-qtP"/>
+                        <outlet property="lblBuycreditsTab" destination="vpL-Ay-tFm" id="8WX-Qa-CmT"/>
                         <outlet property="lblCredits" destination="S67-sz-N3E" id="Ba7-u2-v9Q"/>
                         <outlet property="lblFollowerCount" destination="L5z-QO-EUl" id="r97-Ds-ttl"/>
+                        <outlet property="lblHomeTab" destination="OeM-dn-v95" id="cz2-2p-Sqw"/>
+                        <outlet property="lblSettingsTab" destination="Pki-Gi-MWo" id="EzH-rC-7ov"/>
                         <outlet property="lblUsername" destination="fzy-hO-E0L" id="cQx-vc-Ebk"/>
                         <outlet property="viewBuyCredits" destination="4Zy-q7-3nL" id="ZBx-cL-Zsy"/>
                         <outlet property="viewHome" destination="aE7-Pa-zjA" id="vch-fd-UuQ"/>
@@ -547,7 +552,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-rf-w01">
-                                                <rect key="frame" x="140" y="16" width="95" height="22"/>
+                                                <rect key="frame" x="140.5" y="16" width="95" height="22"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -627,6 +632,7 @@
                         <outlet property="lblRetordersCount" destination="0en-O7-QV8" id="qMS-I3-Gzk"/>
                         <outlet property="lblStatus" destination="MbB-EV-Glv" id="Ucw-KD-FTJ"/>
                         <outlet property="lblUserPanelContents" destination="wgH-Ze-5Ko" id="hQ7-cY-j0o"/>
+                        <outlet property="lblWelcome" destination="mHS-rf-w01" id="Agl-c9-oq4"/>
                         <outlet property="retordersCountHeight" destination="FTq-Mn-PDO" id="4o9-t8-DqB"/>
                         <outlet property="statusHeight" destination="Za4-KY-qKH" id="Ip9-7m-Cah"/>
                         <outlet property="userpanelView" destination="ZIc-wt-a4T" id="6lj-Lb-TT0"/>
@@ -779,7 +785,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-Nr-5ag">
-                                        <rect key="frame" x="140" y="16" width="95" height="22"/>
+                                        <rect key="frame" x="140.5" y="16" width="95" height="22"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -848,7 +854,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uz4-7b-sxs"/>
                     <connections>
+                        <outlet property="btnAnalysis" destination="8Ck-vP-FKd" id="Wyz-4A-mIc"/>
                         <outlet property="lblContents" destination="Iig-hm-pGE" id="R77-cO-Dpd"/>
+                        <outlet property="lblWelcome" destination="udt-Nr-5ag" id="lJ0-mC-Enf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJx-z5-1rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1089,6 +1097,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnContinue" destination="BPO-sh-R6X" id="Zvy-4Q-fgO"/>
                         <outlet property="imgLoading" destination="xG0-JP-KjJ" id="kSL-SP-Wdi"/>
                         <outlet property="lblAverageFAV" destination="aNQ-Fr-xac" id="YBD-Mt-Iup"/>
                         <outlet property="lblAverageRT" destination="O1u-Wb-Pi4" id="4xq-3A-bWY"/>
@@ -1192,20 +1201,20 @@
                                         <rect key="frame" x="62" y="172" width="250" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOW (1.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oB-al-IFm">
-                                                <rect key="frame" x="58.5" y="11" width="109" height="20"/>
+                                                <rect key="frame" x="58.5" y="11.5" width="109" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin.png" translatesAutoresizingMaskIntoConstraints="NO" id="w0T-yj-c75">
-                                                <rect key="frame" x="171.5" y="10.5" width="20" height="20"/>
+                                                <rect key="frame" x="171.5" y="11.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="06n-EK-ZAl"/>
                                                     <constraint firstAttribute="width" secondItem="w0T-yj-c75" secondAttribute="height" id="uM1-DW-LK2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ9-vR-EyJ">
-                                                <rect key="frame" x="193.5" y="11" width="6" height="20"/>
+                                                <rect key="frame" x="193.5" y="11.5" width="6" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1645,6 +1654,12 @@
                     <navigationItem key="navigationItem" id="ZgR-X7-5dH"/>
                     <connections>
                         <outlet property="imgLoading" destination="P8M-h4-0l8" id="ZnE-SD-Eg4"/>
+                        <outlet property="lbl10000Credits" destination="92u-mM-aRw" id="rHl-xP-f4Y"/>
+                        <outlet property="lbl1000Credits" destination="zP3-Nw-LbU" id="mSw-ZV-583"/>
+                        <outlet property="lbl2500Credits" destination="yvd-PH-tJR" id="hXZ-qC-osl"/>
+                        <outlet property="lbl250Credits" destination="g7i-nT-lno" id="UdB-mX-pi2"/>
+                        <outlet property="lbl5000Credits" destination="wbD-Ir-Zb2" id="8OH-YA-LVY"/>
+                        <outlet property="lbl500Credits" destination="Y3N-Ai-0NG" id="Vih-0J-tLq"/>
                         <outlet property="loadingView" destination="v6e-bE-mry" id="EKu-aN-3Wf"/>
                     </connections>
                 </viewController>
@@ -1766,6 +1781,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WtF-eY-dam"/>
+                    <connections>
+                        <outlet property="btnBuyCredits" destination="Ok6-b7-FQT" id="VKL-nS-TZi"/>
+                        <outlet property="btnChange" destination="GYW-wQ-xt4" id="gxL-CL-DJ7"/>
+                        <outlet property="btnContactUs" destination="MJC-TS-NFj" id="c6a-2L-Hdj"/>
+                        <outlet property="btnOther" destination="bbd-3a-cps" id="RIr-1c-TvM"/>
+                        <outlet property="btnRate" destination="CHK-Ux-1lF" id="BuE-uc-m70"/>
+                        <outlet property="btnShare" destination="vRE-12-KNr" id="twR-xP-gpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BF-UW-aLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1927,7 +1950,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSend" destination="d8w-dK-2Rx" id="1BT-Gh-UeM"/>
                         <outlet property="imgLoading" destination="UPF-9J-dvT" id="WpM-7y-xWZ"/>
+                        <outlet property="lblEmailAddress" destination="CFM-hv-OjT" id="Cuc-mU-8rL"/>
+                        <outlet property="lblMessage" destination="LtA-6K-qTY" id="9S8-ma-Joc"/>
                         <outlet property="loadingView" destination="s7J-2K-Ni7" id="doA-tp-9Se"/>
                         <outlet property="txtEmail" destination="0YO-UJ-5XR" id="ivx-NF-iqI"/>
                         <outlet property="txtMessage" destination="NTx-ru-GCe" id="Vdx-fe-Ak0"/>
