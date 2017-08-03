@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, HomeVCDelegate {
 
     @IBOutlet weak var lblCredits: UILabel!
     
@@ -36,14 +36,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.initViews()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(refreshViews), name: NSNotification.Name(rawValue: "refresh"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoHome), name: NSNotification.Name(rawValue: "gotohome"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoBuyCredits), name: NSNotification.Name(rawValue: "gotobuycredits"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotoChangeUser), name: NSNotification.Name(rawValue: "gotochangeuser"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(gotoUserPanel), name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -60,10 +57,20 @@ class MainViewController: UIViewController {
         
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "HomeVCSegue") {
+            let homeVC = segue.destination as! HomeViewController
+            homeVC.delegate = self
+        }
+    }
+    
     
     func refreshViews() {
         self.initViews()
@@ -114,6 +121,7 @@ class MainViewController: UIViewController {
     }
     
     func gotoHome() {
+        
         self.btnHomeTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 100/255.0, blue: 1.0, alpha: 1.0)
         self.btnBuyCreditsTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 131/255.0, blue: 208/255.0, alpha: 1.0)
         self.btnSettingsTab.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 131/255.0, blue: 208/255.0, alpha: 1.0)
@@ -193,7 +201,7 @@ class MainViewController: UIViewController {
         let vc : UserPanelViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserPanelViewController") as! UserPanelViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(gotoUserPanel), name: NSNotification.Name(rawValue: "gotouserpanel"), object: nil)
+        
     }
+    
 }

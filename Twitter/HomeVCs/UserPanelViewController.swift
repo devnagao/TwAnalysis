@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class UserPanelViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
@@ -15,12 +16,20 @@ class UserPanelViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var loadingImageView: UIImageView!
     
+    @IBOutlet weak var lblUserPanel: UILabel!
+    @IBOutlet weak var btnClose: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.lblUserPanel.text = NSLocalizedString("User Panel", comment: "")
+        self.btnClose.setTitle(NSLocalizedString("Close", comment: ""), for: .normal)
+        
         let username = UserDefaults.standard.string(forKey: "username") ?? ""
-        let languageCode = Locale.preferredLanguages[0]
+        var languageCode = Locale.preferredLanguages[0] as String
+        languageCode = languageCode.substring(to: languageCode.index(languageCode.startIndex, offsetBy: 2))
         
         self.loadingView.isHidden = true
         

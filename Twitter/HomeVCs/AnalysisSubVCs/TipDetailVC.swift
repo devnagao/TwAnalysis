@@ -160,7 +160,7 @@ class TipDetailVC: UIViewController {
     
     func showTipContent() {
         
-        let tipString = NSLocalizedString("Tips", comment: "") + String(tipCounter)
+        let tipString = "tip" + String(tipCounter)
         self.lblTipContent.text = AppData.shared.jsonData[tipString] as? String ?? ""
 
         self.btnShow.isHidden = true
