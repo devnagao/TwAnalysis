@@ -5,4 +5,5 @@ target 'Twitter' do
 use_frameworks!
 
   pod 'Alamofire'
+  pod 'SwiftyStoreKit'
 end

@@ -88,13 +88,17 @@ class MainViewController: UIViewController, HomeVCDelegate {
             
             DispatchQueue.global(qos: .userInitiated).async {
                 
-                let imageData: NSData = NSData(contentsOf: imageUrl)!
-                
-                // When from background thread, UI needs to be updated on main_queue
-                DispatchQueue.main.async {
-                    let image = UIImage(data: imageData as Data)!
-                    self.imgProfile.image = image
+                do {
+                    let imageData: Data = try Data(contentsOf: imageUrl)
+                    // When from background thread, UI needs to be updated on main_queue
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: imageData as Data)!
+                        self.imgProfile.image = image
+                    }
+                } catch {
+                    print(error.localizedDescription)
                 }
+                
             }
         }
         

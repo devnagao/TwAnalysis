@@ -10,9 +10,28 @@ import UIKit
 import Alamofire
 import SystemConfiguration
 import Foundation
-import StoreKit
+import SwiftyStoreKit
+//import StoreKit
 
-class BuyCreditsViewController: UIViewController {
+
+//extension SKProduct {
+//    
+//    func priceAsString() -> String {
+//        var formatter : NumberFormatter? = nil
+//        if formatter == nil {
+//            formatter = NumberFormatter()
+//        }
+//        
+//        formatter?.formatterBehavior = NumberFormatter.Behavior.behavior10_4
+//        formatter?.numberStyle = NumberFormatter.Style.currency
+//        formatter?.locale = self.priceLocale
+//        
+//        return (formatter?.string(from: self.price))!
+//    }
+//}
+
+
+class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate, SKPaymentTransactionObserver, SKRequestDelegate {
 
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var imgLoading: UIImageView!
@@ -24,10 +43,23 @@ class BuyCreditsViewController: UIViewController {
     @IBOutlet weak var lbl5000Credits: UILabel!
     @IBOutlet weak var lbl10000Credits: UILabel!
     
+    var productIds : [String] = ["credits_250", "credits_500", "credits_1000", "credits_2500", "credits_5000", "credits_10000"]
+    var titles : [String] = []
+    var prices : [String] = []
     
-    
+    var deliveryFormat: String = ""
     
     var resultString: String = ""
+
+//    let receiptRequest = SKReceiptRefreshRequest()
+    
+//    func getProductsRequest()->SKProductsRequest {
+//        if (productsRequest == nil) {
+//            productsRequest = SKProductsRequest(productIdentifiers: NSSet(array: self.productIds) as! Set<String>)
+//            productsRequest?.delegate = self
+//        }
+//        return productsRequest!
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,32 +69,14 @@ class BuyCreditsViewController: UIViewController {
         
         self.loadingView.isHidden = true
         
-        var productIdentifiers = Set<ProductIdentifier>()
-        productIdentifiers.insert("credits_250")
-        productIdentifiers.insert("credits_500")
-        productIdentifiers.insert("credits_1000")
-        productIdentifiers.insert("credits_5000")
-        productIdentifiers.insert("credits_10000")
+//        self.productsRequest = self.getProductsRequest()
+//        self.productsRequest?.start()
+//        SKPaymentQueue.default().add(self)
         
-        IAP.requestProducts(productIdentifiers) { (response, error) in
-            if let products = response?.products, !products.isEmpty {
-                for product in products {
-                    self.resultString += product.productIdentifier
-                }
-                
-            } else if let invalidProductIdentifiers = response?.invalidProductIdentifiers {
-                self.resultString = "Invalid product identifiers: " + invalidProductIdentifiers.description
-                
-            } else if let error = error as NSError? {
-                if error.code == SKError.Code.paymentCancelled.rawValue {
-                    self.resultString = ""
-                    
-                } else {
-                    self.resultString = error.localizedDescription
-                }
-            }
-            print(self.resultString)
-        }
+        
+//        receiptRequest.delegate = self
+        
+        
         
     }
     
@@ -73,8 +87,6 @@ class BuyCreditsViewController: UIViewController {
         self.lbl2500Credits.text = "2500 " + NSLocalizedString("Credits", comment: "")
         self.lbl5000Credits.text = "5000 " + NSLocalizedString("Credits", comment: "")
         self.lbl10000Credits.text = "10000 " + NSLocalizedString("Credits", comment: "")
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,75 +98,105 @@ class BuyCreditsViewController: UIViewController {
     
     @IBAction func on250(_ sender: Any) {
         
-        self.purchase(productID: "credits_250")
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.imgLoading.image = gif
+        self.loadingView.isHidden = false
+        
+        self.purchase(productId: "credits_250")
     }
     
     @IBAction func on500(_ sender: Any) {
-        self.purchase(productID: "credits_500")
+
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.imgLoading.image = gif
+        self.loadingView.isHidden = false
+        
+        self.purchase(productId: "credits_500")
     }
     
     @IBAction func on1000(_ sender: Any) {
-        self.purchase(productID: "credits_1000")
+
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.imgLoading.image = gif
+        self.loadingView.isHidden = false
+        
+        self.purchase(productId: "credits_1000")
     }
     
     @IBAction func on2500(_ sender: Any) {
-        self.purchase(productID: "credits_2500")
+
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.imgLoading.image = gif
+        self.loadingView.isHidden = false
+        
+        self.purchase(productId: "credits_2500")
     }
     
     @IBAction func on5000(_ sender: Any) {
-        self.purchase(productID: "credits_5000")
+
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.imgLoading.image = gif
+        self.loadingView.isHidden = false
+        
+        self.purchase(productId: "credits_5000")
     }
     
     @IBAction func on10000(_ sender: Any) {
-        self.purchase(productID: "credits_10000")
-    }
-    
-    func purchase(productID: String) {
-        IAP.purchaseProduct(productID, handler: { (productIdentifier, error) in
-            if let identifier = productIdentifier {
-                self.resultString = identifier
-                
-            } else if let error = error as NSError? {
-                if error.code == SKError.Code.paymentCancelled.rawValue {
-                    self.resultString = ""
-                    
-                } else {
-                    self.resultString = error.localizedDescription
-                }
-            }
-            
-            self.validateReceipt()
-        })
-    }
-    
-    func validateReceipt() {
+ 
+        let gif = UIImage.gifImageWithName(name: "loading")
+        self.imgLoading.image = gif
+        self.loadingView.isHidden = false
         
-        IAP.validateReceipt("2dbc5006fff544d58c1c4d0fa6446e42") { (statusCode, products, json) in
-            
-            var receipt: [String: Any] = [:]
-            
-            if statusCode == ReceiptStatus.noRecipt.rawValue {
-                // No Receipt in main bundle
-                self.resultString = "No receipt"
-            } else {
-                // Get products with their expire date.
-                var productString = ""
-                if let products = products {
-                    for (productID, _) in products {
-                        productString += productID + " "
+        self.purchase(productId: "credits_10000")
+    }
+    
+    
+    func purchase(productId: String) {
+        
+        SwiftyStoreKit.purchaseProduct(productId, atomically: true) { result in
+            self.loadingView.isHidden = true
+            if case .success(let purchase) = result {
+                // Deliver content from server, then:
+                if purchase.needsFinishTransaction {
+                    SwiftyStoreKit.finishTransaction(purchase.transaction)
+                }
+                
+                let appleValidator = AppleReceiptValidator(service: .production)
+                SwiftyStoreKit.verifyReceipt(using: appleValidator, password: "") { result in
+                    
+                    if case .success(let receipt) = result {
+                        
+                        
+                        let purchaseResult = SwiftyStoreKit.verifySubscription(
+                            type: .autoRenewable,
+                            productId: productId,
+                            inReceipt: receipt)
+                        print("Verify receipt success: \(receipt)")
+                        
+                        let receiptData = receipt.description.data(using: .utf8)
+                        let receiptString = receiptData?.base64EncodedString(options: [])
+                        self.verifyTransaction(receiptData: receiptString!)
+                        
+                        switch purchaseResult {
+                        case .purchased(let expiryDate, let receiptItems):
+                            print("Product is valid until \(expiryDate)")
+                        case .expired(let expiryDate, let receiptItems):
+                            print("Product is expired since \(expiryDate)")
+                        case .notPurchased:
+                            print("This product has never been purchased")
+                        }
+                    } else {
+                        // receipt verification error
                     }
                 }
-                self.resultString = "\(statusCode ?? -999): \(productString)"
-                
-                receipt = json!
+            } else {
+                // purchase error
             }
-            
-            self.sendReceipt(receipt: receipt)
-            
         }
+
     }
     
-    func sendReceipt(receipt: Any) {
+    func verifyTransaction(receiptData: Any) {
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.imgLoading.image = gif
@@ -169,7 +211,7 @@ class BuyCreditsViewController: UIViewController {
         let urlString: String = "https://www.twfollo.com/retweet/twapi.php"
         
         let username = UserDefaults.standard.string(forKey: "username") ?? ""
-        let param: [String: Any] = ["twusername333": username, "getoperation": "buycredits", "receipt": receipt]
+        let param: [String: Any] = ["twusername333": username, "getoperation": "buycredits", "receipt": receiptData]
         
         Alamofire.request(urlString, method: .post, parameters: param,
                           encoding: URLEncoding.default)
@@ -194,14 +236,19 @@ class BuyCreditsViewController: UIViewController {
                 }
                 
                 self.completionPurchase()
-                let protected = Int(json["protected"] as! String) ?? 1
+                var protected: Int = 1
+                guard let protectedString = json["protected"] as? String else {
+                    protected = 1
+                    return
+                }
+                
+                protected = Int(protectedString)!
                 if (protected == 0) {
                     self.showDefaultAlert(title: "", message: NSLocalizedString("Your account is private. Please make your account public.", comment: ""))
                 }
                 
         }
     }
-    
     
     func completionPurchase() {
         
@@ -215,6 +262,7 @@ class BuyCreditsViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
     
     func isInternetAvailable() -> Bool
     {
@@ -245,6 +293,4 @@ class BuyCreditsViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
 }
