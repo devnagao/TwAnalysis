@@ -251,6 +251,7 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
     }
     
     func completionPurchase() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
         
         let alertController = UIAlertController(title: "Success" as String, message: NSLocalizedString("Do you want to see other applications of us?", comment: "") as String, preferredStyle: UIAlertControllerStyle.alert)
         let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
