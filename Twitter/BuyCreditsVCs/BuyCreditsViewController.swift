@@ -11,27 +11,10 @@ import Alamofire
 import SystemConfiguration
 import Foundation
 import SwiftyStoreKit
-//import StoreKit
+import StoreKit
 
 
-//extension SKProduct {
-//    
-//    func priceAsString() -> String {
-//        var formatter : NumberFormatter? = nil
-//        if formatter == nil {
-//            formatter = NumberFormatter()
-//        }
-//        
-//        formatter?.formatterBehavior = NumberFormatter.Behavior.behavior10_4
-//        formatter?.numberStyle = NumberFormatter.Style.currency
-//        formatter?.locale = self.priceLocale
-//        
-//        return (formatter?.string(from: self.price))!
-//    }
-//}
-
-
-class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate, SKPaymentTransactionObserver, SKRequestDelegate {
+class BuyCreditsViewController: UIViewController { 
 
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var imgLoading: UIImageView!
@@ -51,16 +34,6 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
     
     var resultString: String = ""
 
-//    let receiptRequest = SKReceiptRefreshRequest()
-    
-//    func getProductsRequest()->SKProductsRequest {
-//        if (productsRequest == nil) {
-//            productsRequest = SKProductsRequest(productIdentifiers: NSSet(array: self.productIds) as! Set<String>)
-//            productsRequest?.delegate = self
-//        }
-//        return productsRequest!
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,16 +41,19 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
         self.setLabels()
         
         self.loadingView.isHidden = true
-        
-//        self.productsRequest = self.getProductsRequest()
-//        self.productsRequest?.start()
-//        SKPaymentQueue.default().add(self)
-        
-        
-//        receiptRequest.delegate = self
-        
-        
-        
+
+        let currentQueue : SKPaymentQueue = SKPaymentQueue.default();
+        for transaction in currentQueue.transactions {
+            if (transaction.transactionState == SKPaymentTransactionState.failed) {
+                //possibly handle the error
+                currentQueue.finishTransaction(transaction);
+            } else if (transaction.transactionState == SKPaymentTransactionState.purchased) {
+                //deliver the content to the user
+                currentQueue.finishTransaction(transaction);
+            } else {
+                //handle other transaction states
+            }
+        }
     }
     
     func setLabels() {
@@ -153,50 +129,32 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
     
     func purchase(productId: String) {
         
-        SwiftyStoreKit.purchaseProduct(productId, atomically: true) { result in
+        SwiftyStoreKit.purchaseProduct(productId, atomically: false) { result in
             self.loadingView.isHidden = true
             if case .success(let purchase) = result {
-                // Deliver content from server, then:
-                if purchase.needsFinishTransaction {
-                    SwiftyStoreKit.finishTransaction(purchase.transaction)
-                }
                 
-                let appleValidator = AppleReceiptValidator(service: .production)
-                SwiftyStoreKit.verifyReceipt(using: appleValidator, password: "") { result in
+                let receiptUrl = Bundle.main.appStoreReceiptURL
+                do {
+                    let receiptData = try Data(contentsOf: receiptUrl!)
+                    let receiptString = receiptData.base64EncodedString(options: [])
                     
-                    if case .success(let receipt) = result {
-                        
-                        
-                        let purchaseResult = SwiftyStoreKit.verifySubscription(
-                            type: .autoRenewable,
-                            productId: productId,
-                            inReceipt: receipt)
-                        print("Verify receipt success: \(receipt)")
-                        
-                        let receiptData = receipt.description.data(using: .utf8)
-                        let receiptString = receiptData?.base64EncodedString(options: [])
-                        self.verifyTransaction(receiptData: receiptString!)
-                        
-                        switch purchaseResult {
-                        case .purchased(let expiryDate, let receiptItems):
-                            print("Product is valid until \(expiryDate)")
-                        case .expired(let expiryDate, let receiptItems):
-                            print("Product is expired since \(expiryDate)")
-                        case .notPurchased:
-                            print("This product has never been purchased")
-                        }
-                    } else {
-                        // receipt verification error
+                    self.verifyTransaction(purchase: purchase, receiptData: receiptString)
+                    
+                } catch {
+                    print("Failed")
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
                 }
+                
             } else {
-                // purchase error
+                
             }
         }
 
     }
     
-    func verifyTransaction(receiptData: Any) {
+    func verifyTransaction(purchase: PurchaseDetails, receiptData: Any) {
         
         let gif = UIImage.gifImageWithName(name: "loading")
         self.imgLoading.image = gif
@@ -221,13 +179,20 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
                 
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
                     self.showDefaultAlert(title: "Error", message: "")
                     print(response.result.error!)
+                    
                     return
                 }
                 // make sure we got some JSON since that's what we expect
                 guard let json = response.result.value as? [String: Any] else {
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                    
                     self.showDefaultAlert(title: "Error", message: "Empty Data")
                     
                     print("didn't get todo object as JSON from API")
@@ -235,9 +200,28 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
                     return
                 }
                 
-                self.completionPurchase()
+                AppData.shared.jsonData = json
+                
+                var credits: Int = 0
+                guard let creditsString = json["credits"] as? String else {
+                    
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                    credits = 0
+                    AppData.shared.credits = credits
+                    self.completionPurchase()
+                    return
+                }
+                credits = Int(creditsString)!
+                
+                AppData.shared.credits = credits
+                
                 var protected: Int = 1
                 guard let protectedString = json["protected"] as? String else {
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
                     protected = 1
                     return
                 }
@@ -247,14 +231,21 @@ class BuyCreditsViewController: UIViewController { //, SKProductsRequestDelegate
                     self.showDefaultAlert(title: "", message: NSLocalizedString("Your account is private. Please make your account public.", comment: ""))
                 }
                 
+                if purchase.needsFinishTransaction {
+                    SwiftyStoreKit.finishTransaction(purchase.transaction)
+                }
+                
+                self.completionPurchase()
+                
         }
     }
     
     func completionPurchase() {
+        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
         
         let alertController = UIAlertController(title: "Success" as String, message: NSLocalizedString("Do you want to see other applications of us?", comment: "") as String, preferredStyle: UIAlertControllerStyle.alert)
-        let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: UIAlertActionStyle.cancel, handler: nil)
+        let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: UIAlertActionStyle.cancel, handler:nil)
         let yesAction = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: UIAlertActionStyle.default) { (action) in
             UIApplication.shared.open(URL(string: "https://itunes.apple.com/developer/erkan-eroglu/id667357099")!, options: [:], completionHandler: nil)
         }
