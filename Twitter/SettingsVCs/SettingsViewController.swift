@@ -41,8 +41,8 @@ class SettingsViewController: UIViewController {
     
 
     @IBAction func onRate(_ sender: Any) {
-        if (UIApplication.shared.canOpenURL(URL(string: "itms-apps://itunes.apple.com/app/id1265362897")!)) {
-            UIApplication.shared.open(URL(string: "itms-apps://itunes.apple.com/app/id1265362897")!, options: [:], completionHandler: nil)
+        if (UIApplication.shared.canOpenURL(URL(string: "itms-apps://itunes.apple.com/app/id1263893870")!)) {
+            UIApplication.shared.open(URL(string: "itms-apps://itunes.apple.com/app/id1263893870")!, options: [:], completionHandler: nil)
         }
         
     }
@@ -50,7 +50,7 @@ class SettingsViewController: UIViewController {
     @IBAction func onShare(_ sender: Any) {
         let textToShare = "Twitter is awesome!  Check out this website about it!"
         
-        if let myWebsite = NSURL(string: "https://itunes.apple.com/us/app/test-twitter/id1265362897?ls=1&mt=8") {
+        if let myWebsite = NSURL(string: "https://itunes.apple.com/us/app/test-twitter/id1263893870?ls=1&mt=8") {
             let objectsToShare = [textToShare, myWebsite] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
