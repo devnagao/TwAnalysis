@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D7B9EFC11F283376002B5A8A"
                BuildableName = "Twitter.app"
                BlueprintName = "Twitter"
-               ReferencedContainer = "container:Twitter.xcodeproj">
+               ReferencedContainer = "container:Twfollow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "D7B9EFC11F283376002B5A8A"
             BuildableName = "Twitter.app"
             BlueprintName = "Twitter"
-            ReferencedContainer = "container:Twitter.xcodeproj">
+            ReferencedContainer = "container:Twfollow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "D7B9EFC11F283376002B5A8A"
             BuildableName = "Twitter.app"
             BlueprintName = "Twitter"
-            ReferencedContainer = "container:Twitter.xcodeproj">
+            ReferencedContainer = "container:Twfollow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "D7B9EFC11F283376002B5A8A"
             BuildableName = "Twitter.app"
             BlueprintName = "Twitter"
-            ReferencedContainer = "container:Twitter.xcodeproj">
+            ReferencedContainer = "container:Twfollow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

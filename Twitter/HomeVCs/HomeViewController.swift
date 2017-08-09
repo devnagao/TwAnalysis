@@ -48,27 +48,18 @@ class HomeViewController: UIViewController {
         let urlString: String = "https://twfollo.com/retweet/twapi.php"
         let param: [String: Any] = ["twusername333": username]
         
-//        let gif = UIImage.gifImageWithName(name: "loading")
-//        self.loadingImageView.image = gif
-//        self.loadingView.isHidden = false
-//        
-        
         Alamofire.request(urlString, method: .post, parameters: param,
                           encoding: URLEncoding.default)
             .responseJSON { response in
                 
-//                self.loadingView.isHidden = true
-                
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
                     
-//                    self.showDefaultAlert(title: "Login Failed", message: "")
                     print(response.result.error!)
                     return
                 }
                 // make sure we got some JSON since that's what we expect
                 guard let json = response.result.value as? [String: Any] else {
-//                    self.showDefaultAlert(title: "Login Failed", message: "")
                     
                     print("didn't get todo object as JSON from API")
                     return

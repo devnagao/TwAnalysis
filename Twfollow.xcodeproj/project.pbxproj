@@ -21,7 +21,6 @@
 		D75C959A1F2B285C00C6B534 /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */; };
 		D75C959E1F2B304C00C6B534 /* Myriad Pro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */; };
 		D75C95A01F2BB48800C6B534 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75C959F1F2BB48800C6B534 /* StoreKit.framework */; };
-		D7616C521F2EC22100474734 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7616C511F2EC22100474734 /* IAPHelper.swift */; };
 		D779BE2A1F3019E200D77F67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D779BE2C1F3019E200D77F67 /* Localizable.strings */; };
 		D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC51F283376002B5A8A /* AppDelegate.swift */; };
 		D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC71F283376002B5A8A /* LoginViewController.swift */; };
@@ -54,7 +53,6 @@
 		D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Regular.ttf"; path = "fonts/Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Bold.ttf"; path = "fonts/Myriad Pro Bold.ttf"; sourceTree = "<group>"; };
 		D75C959F1F2BB48800C6B534 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		D7616C511F2EC22100474734 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = IAP/IAPHelper.swift; sourceTree = "<group>"; };
 		D779BE2B1F3019E200D77F67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D779BE2D1F301A7E00D77F67 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		D779BE2E1F301A7E00D77F67 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 		D77EFF7A1F306DE2009BA851 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D77EFF7B1F306FA9009BA851 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		D77EFF7C1F306FA9009BA851 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D7B9EFC21F283376002B5A8A /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B9EFC21F283376002B5A8A /* Twfollow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twfollow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B9EFC51F283376002B5A8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B9EFC71F283376002B5A8A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7B9EFCA1F283376002B5A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,18 +167,10 @@
 			name = fonts;
 			sourceTree = "<group>";
 		};
-		D7616C4E1F2EC1F900474734 /* IAP */ = {
-			isa = PBXGroup;
-			children = (
-				D7616C511F2EC22100474734 /* IAPHelper.swift */,
-			);
-			name = IAP;
-			sourceTree = "<group>";
-		};
 		D7B9EFB91F283376002B5A8A = {
 			isa = PBXGroup;
 			children = (
-				D7B9EFC41F283376002B5A8A /* Twitter */,
+				D7B9EFC41F283376002B5A8A /* Twfollow */,
 				D7B9EFC31F283376002B5A8A /* Products */,
 				6C85D06F422A0C9995E90AFA /* Pods */,
 				84E281B825FE64767235ED80 /* Frameworks */,
@@ -190,15 +180,14 @@
 		D7B9EFC31F283376002B5A8A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7B9EFC21F283376002B5A8A /* Twitter.app */,
+				D7B9EFC21F283376002B5A8A /* Twfollow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D7B9EFC41F283376002B5A8A /* Twitter */ = {
+		D7B9EFC41F283376002B5A8A /* Twfollow */ = {
 			isa = PBXGroup;
 			children = (
-				D7616C4E1F2EC1F900474734 /* IAP */,
 				D75C95981F2B284C00C6B534 /* fonts */,
 				D75C958F1F2AE44D00C6B534 /* SettingsVCs */,
 				D75C958E1F2AE44600C6B534 /* BuyCreditsVCs */,
@@ -215,6 +204,7 @@
 				D75C957F1F2AC89E00C6B534 /* MainViewController.swift */,
 				D779BE2C1F3019E200D77F67 /* Localizable.strings */,
 			);
+			name = Twfollow;
 			path = Twitter;
 			sourceTree = "<group>";
 		};
@@ -255,7 +245,6 @@
 				D7B9EFC01F283376002B5A8A /* Resources */,
 				4DFEDCBC10CAA93537492F7E /* [CP] Embed Pods Frameworks */,
 				D2886C09DCB2BA50984B794F /* [CP] Copy Pods Resources */,
-				DE5726F31F32441300877294 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -263,7 +252,7 @@
 			);
 			name = Twitter;
 			productName = Twitter;
-			productReference = D7B9EFC21F283376002B5A8A /* Twitter.app */;
+			productReference = D7B9EFC21F283376002B5A8A /* Twfollow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +276,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D7B9EFBD1F283376002B5A8A /* Build configuration list for PBXProject "Twitter" */;
+			buildConfigurationList = D7B9EFBD1F283376002B5A8A /* Build configuration list for PBXProject "Twfollow" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -373,19 +362,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twitter/Pods-Twitter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE5726F31F32441300877294 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run c3926c3793a3e20333def7148057522be0c2d813 e85f6cec26e19b134e683347daf066e694d8b7589f09f2e49fb450f27656c025";
-		};
 		DF748A80A5F77CCEF4F2FA13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,7 +396,6 @@
 				D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */,
 				D75C95931F2AE49200C6B534 /* SettingsViewController.swift in Sources */,
 				D75C95891F2ACF0A00C6B534 /* WelcomeVC.swift in Sources */,
-				D7616C521F2EC22100474734 /* IAPHelper.swift in Sources */,
 				D7B9EFE91F2931F4002B5A8A /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +572,7 @@
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eroglu.aninctwf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Twfollow;
 				PROVISIONING_PROFILE = "9d38d318-0114-4b62-8354-2526ebfebdec";
 				PROVISIONING_PROFILE_SPECIFIER = "Tanaka's profile";
 				SWIFT_VERSION = 3.0;
@@ -619,7 +594,7 @@
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eroglu.aninctwf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Twfollow;
 				PROVISIONING_PROFILE = "9d38d318-0114-4b62-8354-2526ebfebdec";
 				PROVISIONING_PROFILE_SPECIFIER = "Tanaka's profile";
 				SWIFT_VERSION = 3.0;
@@ -629,7 +604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7B9EFBD1F283376002B5A8A /* Build configuration list for PBXProject "Twitter" */ = {
+		D7B9EFBD1F283376002B5A8A /* Build configuration list for PBXProject "Twfollow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7B9EFD21F283376002B5A8A /* Debug */,
