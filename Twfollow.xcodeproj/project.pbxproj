@@ -20,7 +20,6 @@
 		D75C95971F2AE7BB00C6B534 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D75C95961F2AE7BB00C6B534 /* back_icon.png */; };
 		D75C959A1F2B285C00C6B534 /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C95991F2B285C00C6B534 /* Myriad Pro Regular.ttf */; };
 		D75C959E1F2B304C00C6B534 /* Myriad Pro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D75C959D1F2B304C00C6B534 /* Myriad Pro Bold.ttf */; };
-		D75C95A01F2BB48800C6B534 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75C959F1F2BB48800C6B534 /* StoreKit.framework */; };
 		D779BE2A1F3019E200D77F67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D779BE2C1F3019E200D77F67 /* Localizable.strings */; };
 		D7B9EFC61F283376002B5A8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC51F283376002B5A8A /* AppDelegate.swift */; };
 		D7B9EFC81F283376002B5A8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9EFC71F283376002B5A8A /* LoginViewController.swift */; };
@@ -92,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6F94B441949923C388346C /* Pods_Twitter.framework in Frameworks */,
-				D75C95A01F2BB48800C6B534 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -86,9 +86,6 @@ class HomeViewController: UIViewController {
 
         }
         
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,7 +130,5 @@ class HomeViewController: UIViewController {
         delegate?.gotoUserPanel()
                 
     }
-    
-    
     
 }

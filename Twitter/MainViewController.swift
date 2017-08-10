@@ -1,10 +1,3 @@
-//
-//  MainViewController.swift
-//  Twitter
-//
-//  Created by Dev on 7/28/17.
-//  Copyright © 2017 Dev. All rights reserved.
-//
 
 import UIKit
 

@@ -11,7 +11,6 @@ import Alamofire
 import SystemConfiguration
 import Foundation
 import SwiftyStoreKit
-import StoreKit
 
 
 class BuyCreditsViewController: UIViewController { 
@@ -42,18 +41,6 @@ class BuyCreditsViewController: UIViewController {
         
         self.loadingView.isHidden = true
 
-        let currentQueue : SKPaymentQueue = SKPaymentQueue.default();
-        for transaction in currentQueue.transactions {
-            if (transaction.transactionState == SKPaymentTransactionState.failed) {
-                //possibly handle the error
-                currentQueue.finishTransaction(transaction);
-            } else if (transaction.transactionState == SKPaymentTransactionState.purchased) {
-                //deliver the content to the user
-                currentQueue.finishTransaction(transaction);
-            } else {
-                //handle other transaction states
-            }
-        }
     }
     
     func setLabels() {
