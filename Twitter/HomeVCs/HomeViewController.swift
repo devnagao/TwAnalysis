@@ -39,6 +39,8 @@ class HomeViewController: UIViewController {
         
         lblWelcome.text = NSLocalizedString("Welcome", comment: "")
         lblUserPanelContents.text = NSLocalizedString("Open your user panel to buy followers and RT-FAV with your credits.", comment: "")
+        
+        self.refresh()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +98,8 @@ class HomeViewController: UIViewController {
     func refresh() {
         let retordersCount = AppData.shared.jsonData["retorderscount"] as! Int
         if (retordersCount > 0) {
+            self.retordersCountHeight.constant = 40;
+            self.view.layoutIfNeeded()
             self.lblRetordersCount.text = String(retordersCount) + " " + NSLocalizedString("RT-FAV orders", comment: "") + " " + NSLocalizedString("are on the way.", comment: "")
         } else {
             self.retordersCountHeight.constant = 0;
@@ -119,6 +123,8 @@ class HomeViewController: UIViewController {
         
         let status = Int(statusString)
         if (status! > 0) {
+            self.statusHeight.constant = 40;
+            self.view.layoutIfNeeded()
             self.lblStatus.text = statusString + " " + NSLocalizedString("Followers", comment: "") + " " + NSLocalizedString("are on the way.", comment: "")
         } else {
             self.statusHeight.constant = 0;

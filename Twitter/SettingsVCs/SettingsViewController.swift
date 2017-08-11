@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var btnContactUs: UIButton!
     @IBOutlet weak var btnRate: UIButton!
@@ -48,18 +49,39 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func onShare(_ sender: Any) {
-        let textToShare = "Twitter is awesome!  Check out this website about it!"
+
+#if DEBUG
         
+        let textToShare = "Twfollow is awesome!  Check out this website about it!"
+    
         if let myWebsite = NSURL(string: "https://itunes.apple.com/us/app/test-twitter/id1263893870?ls=1&mt=8") {
             let objectsToShare = [textToShare, myWebsite] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            
+        
             let excludeActivities = [UIActivityType.mail, .postToFacebook, .postToTwitter, .message] as [UIActivityType]
             activityVC.excludedActivityTypes = excludeActivities
-            
+        
+            activityVC.popoverPresentationController?.sourceView = self.view
             self.present(activityVC, animated: true, completion: nil)
         }
+
+#else
+
+        let picker = MFMailComposeViewController()
+        picker.mailComposeDelegate = self
+        picker.setSubject("Twfollow is awesome!")
+        picker.setMessageBody("https://itunes.apple.com/us/app/test-twitter/id1263893870?ls=1&mt=8", isHTML: true)
+    
+        self.present(picker, animated: true, completion: nil)
+    
+#endif
+        
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func onOtherApps(_ sender: Any) {
         
