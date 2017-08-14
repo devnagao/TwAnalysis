@@ -34,6 +34,8 @@
 		D7B9EFEF1F298ED6002B5A8A /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFEE1F298ED6002B5A8A /* avatar.png */; };
 		D7B9EFFF1F29E8E5002B5A8A /* blue_next.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFFD1F29E8E5002B5A8A /* blue_next.png */; };
 		D7B9F0001F29E8E5002B5A8A /* blue_prev.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B9EFFE1F29E8E5002B5A8A /* blue_prev.png */; };
+		DED0C0001F3C57C600D46755 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BFFE1F3C57C600D46755 /* Fabric.framework */; };
+		DED0C0011F3C57C600D46755 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BFFF1F3C57C600D46755 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,8 @@
 		D7B9EFFD1F29E8E5002B5A8A /* blue_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_next.png; path = images/blue_next.png; sourceTree = "<group>"; };
 		D7B9EFFE1F29E8E5002B5A8A /* blue_prev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_prev.png; path = images/blue_prev.png; sourceTree = "<group>"; };
 		DB96DB14A041A3A1C4C4C82A /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
+		DED0BFFE1F3C57C600D46755 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		DED0BFFF1F3C57C600D46755 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6F94B441949923C388346C /* Pods_Twitter.framework in Frameworks */,
+				DED0C0011F3C57C600D46755 /* Crashlytics.framework in Frameworks */,
+				DED0C0001F3C57C600D46755 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +160,8 @@
 		D7B9EFB91F283376002B5A8A = {
 			isa = PBXGroup;
 			children = (
+				DED0BFFE1F3C57C600D46755 /* Fabric.framework */,
+				DED0BFFF1F3C57C600D46755 /* Crashlytics.framework */,
 				D7B9EFC41F283376002B5A8A /* Twfollow */,
 				D7B9EFC31F283376002B5A8A /* Products */,
 				6C85D06F422A0C9995E90AFA /* Pods */,
@@ -229,6 +237,7 @@
 				D7B9EFC01F283376002B5A8A /* Resources */,
 				4DFEDCBC10CAA93537492F7E /* [CP] Embed Pods Frameworks */,
 				D2886C09DCB2BA50984B794F /* [CP] Copy Pods Resources */,
+				DED0BFFD1F3C572300D46755 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,7 +260,7 @@
 				TargetAttributes = {
 					D7B9EFC11F283376002B5A8A = {
 						CreatedOnToolsVersion = 8.3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -345,6 +354,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twitter/Pods-Twitter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DED0BFFD1F3C572300D46755 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run c3926c3793a3e20333def7148057522be0c2d813 e85f6cec26e19b134e683347daf066e694d8b7589f09f2e49fb450f27656c025";
 		};
 		DF748A80A5F77CCEF4F2FA13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -533,18 +555,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Erkan Eroglu (S8QB2S8PNS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Erkan Eroglu (S8QB2S8PNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Twitter",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eroglu.aninctwf;
 				PRODUCT_NAME = Twfollow;
-				PROVISIONING_PROFILE = "9d38d318-0114-4b62-8354-2526ebfebdec";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanaka's profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -555,18 +578,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Erkan Eroglu (S8QB2S8PNS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Erkan Eroglu (S8QB2S8PNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Twitter",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eroglu.aninctwf;
 				PRODUCT_NAME = Twfollow;
-				PROVISIONING_PROFILE = "9d38d318-0114-4b62-8354-2526ebfebdec";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanaka's profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

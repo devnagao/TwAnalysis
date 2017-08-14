@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         lblUserPanelContents.text = NSLocalizedString("Open your user panel to buy followers and RT-FAV with your credits.", comment: "")
         
         self.refresh()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

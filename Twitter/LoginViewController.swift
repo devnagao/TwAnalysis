@@ -34,6 +34,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.lblNavTitle.text = NSLocalizedString("Welcome", comment: "")
         self.lblTwitterName.text = NSLocalizedString("Enter your twitter username:", comment: "")
         self.btnContinue.setTitle(NSLocalizedString("Continue", comment: ""), for: UIControlState.normal)
+        
+        txtUsername.addTarget(self, action: #selector(checkTextField(sender:)), for: .editingChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -156,6 +158,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS).inverted
         let filtered = (string.components(separatedBy: cs)).joined(separator: "")
         
+        return string == filtered
+    }
+    
+    
+    func checkTextField(sender: Any) {
+        let textField = sender as! UITextField
         if (textField.text != "") {
             self.btnContinue.isEnabled = true
             self.btnContinue.backgroundColor = greenColor
@@ -163,8 +171,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.btnContinue.isEnabled = false
             self.btnContinue.backgroundColor = UIColor.gray
         }
-        
-        return string == filtered
     }
     
     

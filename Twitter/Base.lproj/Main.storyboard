@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fjq-YQ-Abk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fjq-YQ-Abk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
         <!--Login View Controller-->
         <scene sceneID="Dfk-ah-pkV">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="RD8-1s-oDO" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="RD8-1s-oDO" customClass="LoginViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ASA-87-K6D"/>
                         <viewControllerLayoutGuide type="bottom" id="Zuy-AB-ZJC"/>
@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-bz-MCx">
-                                        <rect key="frame" x="15" y="16" width="30" height="48"/>
+                                        <rect key="frame" x="15" y="17" width="30" height="48"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="36"/>
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,7 +175,7 @@
         <!--Main View Controller-->
         <scene sceneID="QKh-zO-aAl">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="q2A-3O-vuC" customClass="MainViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="q2A-3O-vuC" customClass="MainViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SRF-pg-5wg"/>
                         <viewControllerLayoutGuide type="bottom" id="9wd-Oj-fRw"/>
@@ -205,7 +205,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S67-sz-N3E">
-                                        <rect key="frame" x="312.5" y="28" width="10.5" height="20"/>
+                                        <rect key="frame" x="312.5" y="27.5" width="10.5" height="20"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -220,7 +220,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angelina" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-hO-E0L">
-                                        <rect key="frame" x="146.5" y="169" width="82.5" height="28"/>
+                                        <rect key="frame" x="147" y="169" width="82.5" height="28"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -233,7 +233,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6720 Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5z-QO-EUl">
-                                        <rect key="frame" x="119" y="198" width="137.5" height="28"/>
+                                        <rect key="frame" x="119.5" y="198" width="137.5" height="28"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -504,7 +504,7 @@
         <!--Home-->
         <scene sceneID="njx-b7-4gY">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="gdV-BT-cfF" customClass="HomeViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="gdV-BT-cfF" customClass="HomeViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fX-AN-e1g"/>
                         <viewControllerLayoutGuide type="bottom" id="oYa-lh-GzX"/>
@@ -546,7 +546,7 @@
                                         <rect key="frame" x="0.0" y="82" width="375" height="301"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-rf-w01">
-                                                <rect key="frame" x="141" y="16" width="95" height="22"/>
+                                                <rect key="frame" x="140" y="16" width="95" height="22"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -638,7 +638,7 @@
         <!--User Panel View Controller-->
         <scene sceneID="3xW-tL-2nA">
             <objects>
-                <viewController storyboardIdentifier="UserPanelViewController" id="LB6-lP-WQC" customClass="UserPanelViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserPanelViewController" id="LB6-lP-WQC" customClass="UserPanelViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BPI-Q7-22B"/>
                         <viewControllerLayoutGuide type="bottom" id="RrE-Sb-RrX"/>
@@ -745,7 +745,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fjq-YQ-Abk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dVU-lK-GcX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dVU-lK-GcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -761,7 +761,7 @@
         <!--WelcomeVC-->
         <scene sceneID="8Ba-Pl-6Pd">
             <objects>
-                <viewController storyboardIdentifier="WelcomeVC" id="oPn-Ql-heZ" customClass="WelcomeVC" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="oPn-Ql-heZ" customClass="WelcomeVC" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pX8-8H-oPE"/>
                         <viewControllerLayoutGuide type="bottom" id="rVs-Jy-JXX"/>
@@ -780,7 +780,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-Nr-5ag">
-                                        <rect key="frame" x="141" y="16" width="95" height="22"/>
+                                        <rect key="frame" x="140" y="16" width="95" height="22"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -861,7 +861,7 @@
         <!--AnalysisVC-->
         <scene sceneID="mf2-UG-M1B">
             <objects>
-                <viewController storyboardIdentifier="AnalysisVC" id="kB6-UZ-jqd" customClass="AnalysisVC" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnalysisVC" id="kB6-UZ-jqd" customClass="AnalysisVC" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="887-PX-slP"/>
                         <viewControllerLayoutGuide type="bottom" id="9lX-gA-pLN"/>
@@ -1113,7 +1113,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sJt-cf-lch" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Df-c4-ekZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Df-c4-ekZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1129,7 +1129,7 @@
         <!--Tip DetailVC-->
         <scene sceneID="FY2-9S-oEv">
             <objects>
-                <viewController storyboardIdentifier="TipDetailVC" id="kK9-tO-u6s" customClass="TipDetailVC" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TipDetailVC" id="kK9-tO-u6s" customClass="TipDetailVC" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jRo-y4-hlD"/>
                         <viewControllerLayoutGuide type="bottom" id="w7j-C3-EeG"/>
@@ -1196,7 +1196,7 @@
                                         <rect key="frame" x="62" y="172" width="250" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOW (1.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oB-al-IFm">
-                                                <rect key="frame" x="58.5" y="12" width="109" height="20"/>
+                                                <rect key="frame" x="58.5" y="11.5" width="109" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1209,7 +1209,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ9-vR-EyJ">
-                                                <rect key="frame" x="193.5" y="12" width="6" height="20"/>
+                                                <rect key="frame" x="193.5" y="11.5" width="6" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1321,7 +1321,7 @@
         <!--Buy Credits View Controller-->
         <scene sceneID="1HP-L0-kXL">
             <objects>
-                <viewController storyboardIdentifier="BuyCreditsViewController" id="zGm-8f-fwQ" customClass="BuyCreditsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuyCreditsViewController" id="zGm-8f-fwQ" customClass="BuyCreditsViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mLY-Mx-u1f"/>
                         <viewControllerLayoutGuide type="bottom" id="v4C-hA-PAB"/>
@@ -1665,7 +1665,7 @@
         <!--Settings View Controller-->
         <scene sceneID="FKj-r8-JqX">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="Nb3-aD-RYb" customClass="SettingsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="Nb3-aD-RYb" customClass="SettingsViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z5T-A0-ImV"/>
                         <viewControllerLayoutGuide type="bottom" id="PRr-fJ-PrM"/>
@@ -1792,7 +1792,7 @@
         <!--Contact Us View Controller-->
         <scene sceneID="iKc-0g-Htw">
             <objects>
-                <viewController storyboardIdentifier="ContactUsViewController" id="dBq-Iu-RSO" customClass="ContactUsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactUsViewController" id="dBq-Iu-RSO" customClass="ContactUsViewController" customModule="Twfollow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k74-ql-mhK"/>
                         <viewControllerLayoutGuide type="bottom" id="gkD-1m-d1f"/>
@@ -1963,7 +1963,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="a7T-fb-osJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IwG-HS-EOV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="IwG-HS-EOV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1981,7 +1981,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NEf-90-NPp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T4a-tN-xK4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T4a-tN-xK4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
