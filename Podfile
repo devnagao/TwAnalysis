@@ -1,6 +1,6 @@
 platform :ios, '10.0'
 
-target 'Twitter' do
+target 'TwAnalysis' do
   
   use_frameworks!
 
